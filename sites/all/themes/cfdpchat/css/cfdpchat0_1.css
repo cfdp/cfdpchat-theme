@@ -1,0 +1,127 @@
+h1 a.brand {
+  color: white;
+  display: inline;
+  font-family: 'Acme', sans-serif;
+}
+ul.menu.nav {
+  margin-top: -47px;
+}
+
+ul.menu.nav li {
+  display: inline;
+}
+
+ul.menu.nav a {
+  color: white;
+  display: inline;
+  padding: 15px 15px 29px 15px;
+
+}
+
+/* well */
+#opeka-app .connect-interface {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+  width: 330px;
+}
+
+#opeka-app .connect-interface .form-text,
+#opeka-app .connect-interface .form-select {
+  display: block;
+  width: 100%;
+  height: 38px;
+  float: left;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  margin: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+
+#opeka-app .connect-interface fieldset {
+  border: 0px solid transparent;
+  margin: 0;
+  padding: 15px;
+  position: relative;
+}
+
+#opeka-app .connect-interface .form-text.nickname {
+  width: 145px;
+}
+
+#opeka-app .connect-interface .form-text.age {
+  width: 45px;
+}
+
+#opeka-app .connect-interface .form-select.gender {
+  width: 85px;
+}
+
+#opeka-app .connect-interface label,
+#opeka-app .connect-interface .form-submit.btn {
+  clear: left;
+  float: left;
+}
+
+#opeka-app .connect-interface .gender-label {
+  float: left;
+  clear: none;
+}
+
+#opeka-app .connect-interface .welcome-message {
+  background: url("../img/dark_header.png");
+  border-style: solid;
+  border-color: #bababa;
+  border-width: 1px 0;
+  color: rgb(0,0,0);
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 15px 0 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+#opeka-app .connect-interface .form-submit.btn {
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#88c149),color-stop(60%,#73a839),to(#699934));
+  background-image: -webkit-linear-gradient(#88c149,#73a839 60%,#699934);
+  background-image: -moz-linear-gradient(top,#88c149,#73a839 60%,#699934);
+  background-image: linear-gradient(#88c149,#73a839 60%,#699934);
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #59822c;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff88c149',endColorstr='#ff699934',GradientType=0);
+}
+
+#opeka-app .connect-interface .form-submit.btn:hover, 
+#opeka-app .connect-interface .form-submit.btn:focus, 
+#opeka-app .connect-interface .form-submit.btn:active, 
+#opeka-app .connect-interface .form-submit.btn.active, 
+#opeka-app .connect-interface .form-submit.btn {
+  color: #fff;
+  background-color: #5e8a2f;
+  border-color: #547a29;
+}
+
+/* Admin menu fix */
+body.admin-menu .navbar-fixed-top {
+  top: 29px;
+  z-index: 499;
+}
+#admin-menu {
+  box-shadow: none;
+}

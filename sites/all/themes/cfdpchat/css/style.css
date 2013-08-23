@@ -1,0 +1,214 @@
+
+/* LOGGING INTO THE CHAT - /OPEKA */
+#opeka-app .connect-interface {
+  padding: 19px;
+  margin-bottom: 20px;
+  width: 330px;
+}
+
+#opeka-app .connect-interface .form-text.nickname {
+  width: 165px;
+}
+
+#opeka-app .connect-interface .form-text.age {
+  width: 45px;
+}
+
+#opeka-app .connect-interface .form-select.gender {
+  width: 85px;
+}
+
+#opeka-app .connect-interface label,
+#opeka-app .connect-interface button.form-submit {
+  clear: left;
+  float: left;
+}
+
+#opeka-app .connect-interface .gender-label {
+  float: left;
+  clear: none;
+}
+
+#opeka-app .connect-interface .form-text,
+#opeka-app .connect-interface .form-select {
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 8px 12px;
+  font-size: 14px;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+/* ROOM LIST - /OPEKA#ROOMS*/
+.go-to-queues {
+  float: right;
+}
+
+#opeka-app .app-view button.create-room {
+  margin-bottom: 20px;  
+}
+
+/* Create room dialogue */
+input.private,
+label[for=private-room] {
+  display: inline;
+}
+
+/* The actual room list */
+ul.room-list {
+  list-style: none;
+  margin: 20px 0px 0px 0px;
+}
+
+.room {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.room-details {
+  padding: 10px;
+  width: 70px;
+}
+
+.room-status, 
+.room-size {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.room-details, 
+.room-description {
+  float: left;
+}
+
+.room-description {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 0 5px;
+  padding: 10px 5px;
+}
+
+.room-enter, 
+.meantime {
+  display: inline-block;
+  float: right;
+}
+
+/* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
+.app-view {
+  position: relative;
+}
+
+.app-view form.leave-room-form {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.app-view .sidebar {
+  margin: 30px 0 0 10px;
+}
+
+ul.user-list {
+  list-style: none;
+}
+
+.chat-message-list-wrapper {
+  background: #fff;
+}
+
+ul.chat-message-list {
+  list-style: none;
+  margin: 10px;
+}
+
+.chat-message,
+.system-message {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+/* Chat message form */
+
+.message-form {position: relative;}
+
+.message-form .form-text { height: 60px; resize: none; width: 100%;}
+
+.paused-nowriting {background-color: rgb(175,175,175); border: 1px solid rgb(126,126,126); border-radius: 4px; padding: 10px;}
+
+
+/*
+h1 a.brand {
+  color: white;
+  display: inline;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+ul.menu.nav {
+  margin-top: -47px;
+}
+
+ul.menu.nav li {
+  display: inline;
+}
+
+ul.menu.nav a {
+  color: white;
+  display: inline;
+  padding: 15px 15px 29px 15px;
+
+}
+
+
+#opeka-app .connect-interface fieldset {
+  border: 0px solid transparent;
+  margin: 0;
+  padding: 15px;
+  position: relative;
+}
+
+
+
+
+#opeka-app .connect-interface .welcome-message {
+  background: url("../img/dark_header.png");
+  border-style: solid;
+  border-color: #bababa;
+  border-width: 1px 0;
+  color: rgb(0,0,0);
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 15px 0 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+#opeka-app .connect-interface .form-submit.btn {
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#88c149),color-stop(60%,#73a839),to(#699934));
+  background-image: -webkit-linear-gradient(#88c149,#73a839 60%,#699934);
+  background-image: -moz-linear-gradient(top,#88c149,#73a839 60%,#699934);
+  background-image: linear-gradient(#88c149,#73a839 60%,#699934);
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #59822c;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff88c149',endColorstr='#ff699934',GradientType=0);
+}
+
+#opeka-app .connect-interface .form-submit.btn:hover, 
+#opeka-app .connect-interface .form-submit.btn:focus, 
+#opeka-app .connect-interface .form-submit.btn:active, 
+#opeka-app .connect-interface .form-submit.btn.active, 
+#opeka-app .connect-interface .form-submit.btn {
+  color: #fff;
+  background-color: #5e8a2f;
+  border-color: #547a29;
+}
+
+*/
