@@ -159,63 +159,140 @@ ul.chat-message-list {
 }
 
 /* Common styles for all types */
-.bs-callout {
-  margin: 20px 0;
-  padding: 20px;
-  border-left: 5px solid #cccccc;
-  background: whitesmoke;
+.bs-callout .sender-name, .bs-callout .time {
+  color: #999;
 }
+
+
+.bs-callout {
+
+	margin: 10px 0;
+	padding: 10px;
+	border-left: 5px solid #cccccc;
+	background: whitesmoke;
+
+}
+
+
 
 .bs-callout h4 {
+
   margin-top: 0;
+
 }
+
+
 
 .bs-callout p:last-child {
+
   margin-bottom: 0;
+
 }
+
+
 
 .bs-callout .highlight {
+
   background-color: #fff;
+
 }
+
+
 
 /* Variations */
+
 .bs-callout-counselor {
+
   border-left: 5px solid #4cae4c;
+
   background-color: #f4faf4;
+
 }
+
+
 
 .bs-callout-client {
+
   border-left: 5px solid #357ebd;
+
   background-color: #f5f9fc;
+
 }
+
+
 
 .sender-name, .time {
+
   text-transform: uppercase;
+
   font-size: 12px;
+
 }
+
+
 
 .bs-callout .top-info {
-  margin-bottom: 1em;
-}
-
-.bs-callout .actions {
-  margin-top: 1em;
+  margin-bottom: .3em;
 }
 
 .bs-callout:hover .actions .btn-danger {
+
   opacity: 1;
+
 }
+
+
 
 .btn-danger {
+
   opacity: .2;
+
 }
+
+
 
 .bs-callout-client .sender-name, .bs-callout-client .time {
+
   color: #91bce0;
+
 }
 
+
+
 .bs-callout-counselor .sender-name, .bs-callout-counselor .time {
+
   color: #a3d7a3;
+
+}
+
+.chat-message, .system-message {
+  margin-bottom: 5px;
+  padding: 5px 5px 5px 15px;
+}
+
+.system-message {
+  color: #999;
+}
+
+.delete-message.btn-link {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: -2px 0 0;
+  padding: 0 5px 0 0;
+  opacity: 0.4;
+}
+
+.delete-message.btn-link:hover {
+  opacity: 1;
+}
+.chat-message, .system-message {
+  margin-bottom: 5px;
+  padding: 7px 10px 5px 15px;
+}
+
+.system-message {
+  color: #999;
+  padding-left: 20px;
 }
 
 /* Chat message form */
