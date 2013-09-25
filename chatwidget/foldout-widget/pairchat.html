@@ -6,6 +6,8 @@
 <meta http-Equiv="Expires" Content="0" />
 <title>CfDP Chat</title>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<link href='http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css' rel='stylesheet' type='text/css'>
 <link href='css/chat.widget.css' rel='stylesheet' type='text/css'>
 
 <script>
@@ -26,11 +28,11 @@ poll = function () {
     }
     else if (timeout > 0) {
       poll();
-	$('.status-tab').css("background","url(img/chat-close.png)");
+	$('.status-tab').text("Busy");
 	$('.status-wrapper').css("border-width","0");
     }
     else {
-      // External source now.js failed to load
+      // External source now.js failed to load, stop trying...
       window.stop();
       return;
     }
@@ -43,7 +45,7 @@ poll();
 $(document).ready(function() {
   var now_script = document.createElement("script");
   now_script.type = "text/javascript";
-  now_script.src = "http://cyberchat.eu:3011/nowjs/now.js";
+  now_script.src = "http://dev.cfdpchattest:3000/nowjs/now.js";
   document.body.appendChild(now_script);
 });
 </script>
@@ -51,18 +53,22 @@ $(document).ready(function() {
 </head>
 <body>
   <div class="status-wrapper">
-    <div class="status-tab"></div>
-    <div class="status-content">
-      <p class="status-info">Velkommen til CfDP Chat! Er &aring;ben:</p>
-      <ul> 
-        <li>Mandag  13-16</li>
-        <li>Tirsdag 13-16 & 18-21</li>
-        <li>Onsdag  13-16 & 18-21</li>
-        <li>Torsdag 13-16 & 18-21</li>
-        <li>Fredag  13-16</li>
-      </ul>
-      <a id="join-pair-chat" class="btn pairchat" href="#">&Aring;ben</a>
-      <script>$('#join-pair-chat').hide();</script>
+    <div class="col-1">
+      <div class="status-header">Chat</div>
+      <div class="status-tab">Loading...</div>
+      <a id="join-pair-chat" class="btn btn-success pairchat hide" href="#">Enter</a>
+    </div>
+    <div class="col-2">
+      <div class="status-content">
+        <p class="status-info">Welcome to the CfDP Chat. Opening hours:</p>
+        <ul> 
+          <li>Monday  13-16</li>
+          <li>Tuesday 13-16 & 18-21</li>
+          <li>Wednesday  13-16 & 18-21</li>
+          <li>Thursday 13-16 & 18-21</li>
+          <li>Friday  13-16</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

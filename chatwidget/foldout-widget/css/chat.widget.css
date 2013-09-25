@@ -1,36 +1,41 @@
 @import url(http://fonts.googleapis.com/css?family=Cabin);
+body {
+  background-color: #F5F5F5;
+  padding: 0px;
+}
+
 .status-wrapper {
-  background: url('../img/grid_background.png');
+  /*background: url('../img/grid_background.png');
   font-family: Cabin;
   overflow: hidden;
-  width: 256px;
+  width: 256px;*/
 }
-.btn {
-  background: #7AC13A;
-  border-radius: 5px; 
-  border-width: 0; 
-  color: #FFF; display: 
-  inline-block; 
-  font-family: 'Cabin', sans-serif; 
-  font-size: 15px; 
-  font-weight: bold; 
-  margin: 5px auto; 
-  padding: 10px 15px; 
-  text-decoration: none;
-}
-.btn:hover{cursor: pointer; 
-  text-decoration: underline;
-}
-.btn.brevkasser{margin: 10px 0 0 25px;}
 
-.btn.pairchat{
-  margin-left: 50px
-  /*margin-top: 50px;*/
+.status-wrapper .col-1,
+.status-wrapper .col-2 {
+  float: left;
 }
+
+.status-header {
+
+}
+
+.status-tab {
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 40px;
+}
+
+.btn.brevkasser{
+  margin: 10px 0 0 25px;
+}
+
+.btn.pairchat {
+}
+
 .status-content{
-  float: right; 
   padding: 0 8px; 
-  width: 190px;
+  width: 160px;
 }
 
 .status-content ul{
@@ -43,17 +48,10 @@
   list-style: none;
 
 }
-.status-tab{
-  background:url("../img/grid_background.png") no-repeat; 
-  display: inline-block; 
-  float: left;
-  height: 162px;
-  width: 41px;
-}
-.status-info{
+
+.status-info {
   font-family: 'Cabin', sans-serif; 
   font-size: 12px; 
-  margin: 4px 0;
 }
 .read-more {
   display: inline-block; 
@@ -61,10 +59,12 @@
   text-align: center; 
   width: 100%;
 }
-.read-more a{
+.read-more a {
   color: #0B5A7C; 
   font-family: 'Cabin', sans-serif; 
   font-size: 12px; 
   text-decoration: none;
 }
-.read-more a:hover{text-decoration: underline;}
+.read-more a:hover{
+  text-decoration: underline;
+}

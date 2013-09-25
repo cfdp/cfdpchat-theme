@@ -2,6 +2,7 @@
 
 (function ($) {
   var chatStatus = {};
+  var baseURL = "http://dev.cfdpchattest/";
 
   // The following callback is called by the server in order to
   // advertise its status.
@@ -14,30 +15,36 @@
   $(function () {
     var statusTab = $('.status-tab'),
         chatButton = $('#join-pair-chat');
-        
+
+    chatButton.hide();
+
     // Updates the actual status text.
     var updateDisplay = function (attributes) {
 
      //For debugging...
       var debugchat = false;
       if (debugchat) {
-        statusTab.css("background","url('/img/chat-close.png') no-repeat");
+        statusTab.css("color","#ED2E3A");
+        statusTab.text("Closed");
         chatButton.hide();
         return;
       }
 
-      // If there are any active one-to-one rooms.
-      if (chatStatus.rooms && chatStatus.rooms.pair.active > 0) {    
-        statusTab.css("background","url('img/chat-open.png') no-repeat");
+      // If there are any active one-to-one rooms (chat open).
+      if (chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
+        statusTab.css("color","#43B149");
+        statusTab.text("Open");
         chatButton.show();
-      // If not, check if there are any active group rooms.
+      // If not, check if there are any busy rooms.
       } else if (chatStatus.rooms && chatStatus.rooms.pair.full > 0) {
-        statusTab.css("background","url('img/chat-busy.png') no-repeat");       
+        statusTab.css("color","#FBB12E");
+        statusTab.text("Busy");
         chatButton.hide();
       // For the moment we show the chat as busy as soon as the server is running
       // @todo: make a checkbox in the admin UI where the chat can be set to "on" to replace this
       } else {
-        statusTab.css("background","url('img/chat-busy.png') no-repeat");
+        statusTab.css("color","#FBB12E");
+        statusTab.text("Busy");
         chatButton.hide();
       };
 
@@ -49,20 +56,20 @@
     
     // When the user clicks the button, ask the chat server to join a room.
     chatButton.click(function () {
-	if(!$.browser.opera){	
-		var w = open_window('_blank','http://cyberchat.eu/opeka', 1000, 700);
-	}else{
-		window.parent.location = "http://cyberchat.eu/chat-on-opera";
-	}
+      if(!$.browser.opera){
+        var w = open_window('_blank', baseURL+'opeka', 600, 700);
+      } else {
+        window.parent.location = baseURL+"chat-on-opera";
+      }
 
       now.getDirectSignInURL('pair', function (signInURL) {
         if (!(chatStatus.rooms && chatStatus.rooms.pair.active > 0) && !(chatStatus.rooms && chatStatus.rooms.pair.full > 0)) {
-            w.close();
-            window.location ="http://cfdpchat.eu";
-           }
+          w.close();
+          window.location = baseURL;
+        }
         else {
-			     w.location = signInURL;
-           }
+			    w.location = signInURL;
+        }
       });
     });
 
