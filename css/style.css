@@ -4,6 +4,24 @@ body {
   font-size: 300;
 }
 
+/* Main menu */
+li.expanded,
+li.collapsed,
+li.leaf {
+  padding: 0;
+}
+
+/* Hide page title on opeka pages */
+.page-admin-opeka .page-header,
+.page-opeka .page-header {
+  display: none;
+}
+
+#opeka-app .footer {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
 /* LOGGING INTO THE CHAT - /OPEKA */
 #opeka-app .connect-interface {
   padding: 19px;
@@ -122,7 +140,7 @@ ul.room-list {
   margin: 30px 0 0 5px;
 }
 
-ul {
+ul.chat-message-list {
   max-width: 640px;
   margin: 1em auto;
   font-family: sans-serif;
@@ -165,104 +183,62 @@ ul.chat-message-list {
 
 
 .bs-callout {
-
 	margin: 10px 0;
 	padding: 10px;
 	border-left: 5px solid #cccccc;
 	background: whitesmoke;
-
 }
-
-
 
 .bs-callout h4 {
-
   margin-top: 0;
-
 }
-
-
 
 .bs-callout p:last-child {
-
   margin-bottom: 0;
-
 }
-
-
 
 .bs-callout .highlight {
-
   background-color: #fff;
-
 }
-
 
 
 /* Variations */
 
 .bs-callout-counselor {
-
   border-left: 5px solid #4cae4c;
-
   background-color: #f4faf4;
-
 }
-
-
 
 .bs-callout-client {
-
   border-left: 5px solid #357ebd;
-
   background-color: #f5f9fc;
-
 }
-
-
 
 .sender-name, .time {
-
   text-transform: uppercase;
-
   font-size: 12px;
-
 }
-
-
 
 .bs-callout .top-info {
   margin-bottom: .3em;
 }
 
 .bs-callout:hover .actions .btn-danger {
-
   opacity: 1;
-
 }
-
-
 
 .btn-danger {
-
   opacity: .2;
-
 }
 
-
-
 .bs-callout-client .sender-name, .bs-callout-client .time {
-
   color: #91bce0;
-
 }
 
 
 
 .bs-callout-counselor .sender-name, .bs-callout-counselor .time {
-
   color: #a3d7a3;
-
 }
 
 .chat-message, .system-message {
@@ -299,7 +275,12 @@ ul.chat-message-list {
 
 .message-form {position: relative;}
 
-.message-form .form-text { height: 60px; resize: none; width: 100%;}
+.message-form .form-text {
+  height: 60px;
+  resize: none;
+  max-width: 640px;
+  width: 100%;
+}
 
 .paused-nowriting {background-color: rgb(175,175,175); border: 1px solid rgb(126,126,126); border-radius: 4px; padding: 10px;}
 
@@ -314,70 +295,14 @@ ul.chat-message-list {
   padding: 10px;
 }
 
-/*
-h1 a.brand {
-  color: white;
-  display: inline;
-  font-family: 'Ubuntu', sans-serif;
+/* FIXED TAB - CHAT WIDGET */
+.fixed-tab.well {
+  height: 40px;
+  right: -262px;
+  top: 30%;
+  overflow: hidden;
+  padding: 10px;
+  position: fixed;
+  z-index: 100;
 }
 
-ul.menu.nav {
-  margin-top: -47px;
-}
-
-ul.menu.nav li {
-  display: inline;
-}
-
-ul.menu.nav a {
-  color: white;
-  display: inline;
-  padding: 15px 15px 29px 15px;
-
-}
-
-
-#opeka-app .connect-interface fieldset {
-  border: 0px solid transparent;
-  margin: 0;
-  padding: 15px;
-  position: relative;
-}
-
-
-
-
-#opeka-app .connect-interface .welcome-message {
-  background: url("../img/dark_header.png");
-  border-style: solid;
-  border-color: #bababa;
-  border-width: 1px 0;
-  color: rgb(0,0,0);
-  font-size: 1.3em;
-  font-weight: bold;
-  margin: 15px 0 0;
-  padding: 5px 0;
-  text-align: center;
-}
-
-#opeka-app .connect-interface .form-submit.btn {
-  background-image: -webkit-gradient(linear,0 0,0 100%,from(#88c149),color-stop(60%,#73a839),to(#699934));
-  background-image: -webkit-linear-gradient(#88c149,#73a839 60%,#699934);
-  background-image: -moz-linear-gradient(top,#88c149,#73a839 60%,#699934);
-  background-image: linear-gradient(#88c149,#73a839 60%,#699934);
-  background-repeat: no-repeat;
-  border-bottom: 1px solid #59822c;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff88c149',endColorstr='#ff699934',GradientType=0);
-}
-
-#opeka-app .connect-interface .form-submit.btn:hover, 
-#opeka-app .connect-interface .form-submit.btn:focus, 
-#opeka-app .connect-interface .form-submit.btn:active, 
-#opeka-app .connect-interface .form-submit.btn.active, 
-#opeka-app .connect-interface .form-submit.btn {
-  color: #fff;
-  background-color: #5e8a2f;
-  border-color: #547a29;
-}
-
-*/

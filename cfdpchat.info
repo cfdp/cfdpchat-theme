@@ -12,11 +12,16 @@ regions[content]        = 'Content'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
+regions[fixed_tab]      = 'Fixed Tab'
 
 ; Stylesheets
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/jquery-ui-1.10.0.custom.css
 stylesheets[all][] = css/jquery.ui.1.10.0.ie.css
+
+; Scripts
+scripts[] = 'js/cfdpchat.js'
+
 
 ;**********************************
 ; METHOD 1: Bootstrap Source Files

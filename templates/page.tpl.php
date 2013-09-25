@@ -61,10 +61,10 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <!-- removing breadcrumb, benjamin@benway.dk -->
+      <!-- removing breadcrumb -->
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <!-- on the opeka-pages we don't need the title, benjamin@benway.dk -->
+      <!-- on the opeka-pages we don't need the title -->
       <?php if (!empty($title) && (arg(0) != "opeka")): ?>
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
@@ -86,6 +86,13 @@
       <aside class="span3" role="complementary">
         <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
+    <?php endif; ?>
+
+    <?php if (!empty($page['fixed_tab'])): ?>
+      <div class="fixed-tab well">
+        <?php print render($page['fixed_tab']); ?>
+      </div>
+      <!-- /#fixed-tab -->
     <?php endif; ?>
 
   </div>
