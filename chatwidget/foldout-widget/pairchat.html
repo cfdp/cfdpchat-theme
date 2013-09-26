@@ -11,6 +11,14 @@
 <link href='css/chat.widget.css' rel='stylesheet' type='text/css'>
 
 <script>
+// Getting the basic connection parameters from the URL
+getURLParameter = function (name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+}
+
+var baseURL = getURLParameter("base_url") || "http://demo.cfdpchat.dk";
+var port = getURLParameter("port") || "3000";
+
 // Testing if now.js script is being loaded - if not, stop trying
 var poll;
 var timeout = 50; // 5 seconds timeout
@@ -28,12 +36,13 @@ poll = function () {
     }
     else if (timeout > 0) {
       poll();
-	$('.status-tab').text("Busy");
-	$('.status-wrapper').css("border-width","0");
+      $('.status-tab').css("color","#FBB12E");
+      $('.status-tab').text("Busy");
     }
     else {
       // External source now.js failed to load, stop trying...
       window.stop();
+      console.log("now.js could not be loaded. Check if the Node server is running and check port number.")
       return;
     }
   }, 50);
@@ -45,7 +54,7 @@ poll();
 $(document).ready(function() {
   var now_script = document.createElement("script");
   now_script.type = "text/javascript";
-  now_script.src = "http://dev.cfdpchattest:3000/nowjs/now.js";
+  now_script.src = baseURL + ":" + port + "/nowjs/now.js";
   document.body.appendChild(now_script);
 });
 </script>

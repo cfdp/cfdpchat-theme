@@ -8,11 +8,11 @@
     */
 
       /**
-       * RIGHT SIDE TAB
+       * RIGHT SIDE TAB ANIMATION
        */
       var exp_w = -40;
       var exp_h = 160;
-      var shr_w = -262;
+      var shr_w = -265;
       var shr_h = 40;
       $(".fixed-tab").hover(
         function() {   

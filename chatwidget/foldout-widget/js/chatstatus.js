@@ -1,8 +1,6 @@
 /* This script is called when the connection to the chat server (now.js) has been established */
-
 (function ($) {
   var chatStatus = {};
-  var baseURL = "http://dev.cfdpchattest/";
 
   // The following callback is called by the server in order to
   // advertise its status.
@@ -57,9 +55,9 @@
     // When the user clicks the button, ask the chat server to join a room.
     chatButton.click(function () {
       if(!$.browser.opera){
-        var w = open_window('_blank', baseURL+'opeka', 600, 700);
+        var w = open_window('_blank', baseURL+'/opeka', 600, 700);
       } else {
-        window.parent.location = baseURL+"chat-on-opera";
+        window.parent.location = baseURL+"/chat-on-opera";
       }
 
       now.getDirectSignInURL('pair', function (signInURL) {
