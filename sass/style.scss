@@ -1,11 +1,19 @@
 /* Sass stylesheet for the CfDP Chat theme. 
-Based on Bootstrap 2.0
+Based on Bootstrap 2
 By benway.dk and cfdp.dk */
+
+$bodyBgColor: #FF9501;
+$wrapperBgColor: #F5F5F5;
+$wrapperBorderColor: #AFAFAF;
 
 body {
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 300;
+
+  &.room-size-2 {
+    background: none repeat scroll 0 0 $bodyBgColor;
+  }
 }
 
 /* Main menu */
@@ -178,7 +186,10 @@ ul.chat-message-list {
 }
 
 .chat-message-list-wrapper {
-  background: #fff;
+  background: none repeat scroll 0 0 $wrapperBgColor;
+  border: 1px solid $wrapperBorderColor;
+  border-radius: 4px 4px 4px 4px;
+  padding: 10px 0;
 }
 
 .chat-message,
