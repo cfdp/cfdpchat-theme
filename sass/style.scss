@@ -2,25 +2,29 @@
 Based on Bootstrap 2
 By benway.dk and cfdp.dk */
 
-$bodyBgColor: #FF9501;
+$pairChatBodyBgColor: #FF9501;
+$groupChatBodyBgColor: #9dce74;
 $wrapperBgColor: #F5F5F5;
 $wrapperBorderColor: #AFAFAF;
+$contentBgColor: #FFFFFF;
+$borderRadius: 4px;
+$bgImage: url("images/repeat_main.png");
+$messageBgColor: whitesmoke;
+$messageCounselorBgColor: #fff1b8;
+$messageClientBgColor: #e5ff95;
+$messageBorderLeftColor: #cccccc;
+$messageCounselorBLColor: #4cae4c;
+$messageClientBLColor: #357ebd;
+$messageMetaDataColor: #999999;
+$messageCounselorMDColor: #a3d7a3;
+$messageClientMDColor: #91bce0;
+$messageHighlight: #ffffff;
 
-body {
-  font-size: 14px;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 300;
 
-  &.room-size-2 {
-    background: none repeat scroll 0 0 $bodyBgColor;
-  }
-}
-
-/* Main menu */
-li.expanded,
-li.collapsed,
-li.leaf {
-  padding: 0;
+// Hidden elements @todo: consider adding them as features to config.json
+// or as theme settings
+.not-logged-in .online-status-view {
+  display: none;
 }
 
 /* Hide page title on opeka pages */
@@ -29,9 +33,45 @@ li.leaf {
   display: none;
 }
 
+//Hide leave room button for counselors
+.logged-in .leave-room-form {
+  display: none;
+}
+
+body {
+  background: $bgImage;
+  font-size: 14px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 300;
+
+  &.room-size-2 {
+    background: $pairChatBodyBgColor;
+  }
+
+  &.groupchat {
+    background: $groupChatBodyBgColor;
+  }
+}
+
+.logged-in .opeka-chat-sidebar {
+  background: $contentBgColor;
+  border: 1px solid $wrapperBorderColor;
+  border-radius: $borderRadius;
+  padding: 10px;
+}
+
+
+/* Main menu */
+li.expanded,
+li.collapsed,
+li.leaf {
+  padding: 0;
+}
+
 #opeka-app {
 
   .footer {
+    border: 0px;
     margin: 10px 0;
     padding: 10px 0;
   }
@@ -76,6 +116,41 @@ li.leaf {
       vertical-align: middle;
     }
 
+  }
+
+  /* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
+  .app-view {
+    position: relative;
+
+    form.leave-room-form {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+    /* The user info and admin sidebar */
+    .sidebar {
+      margin: 30px 0 0 5px;
+    }
+
+    ul.user-list {
+      background: $wrapperBgColor;
+      list-style: none;
+      margin: 0px;
+
+      li {
+        border-bottom: 1px solid #e3e3e3;
+        padding: 5px;
+      }
+
+      li i {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  .chat-view-form {
+    margin-top: 10px;
   }
 }
 
@@ -141,42 +216,12 @@ ul.room-list {
   float: right;
 }
 
-/* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
-.app-view {
-  position: relative;
-}
 
-.app-view form.leave-room-form {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-/* The user info and admin sidebar */
-.app-view .sidebar {
-  margin: 30px 0 0 5px;
-}
-
-ul.user-list {
-  background: #f5f5f5;
-  list-style: none;
-  margin: 0px;
-
-  li {
-    border-bottom: 1px solid #e3e3e3;
-    padding: 5px;
-  }
-
-  li i {
-    padding-left: 5px;
-  }
-}
 
 /* The main chat message area */
 ul.chat-message-list {
-  background: rgb(255,255,255);
+  background: $contentBgColor;
   border: 1px solid transparent;
-  border-radius: 4px;
   height: 400px;
   list-style: none;
   margin: 0;
@@ -188,7 +233,8 @@ ul.chat-message-list {
 .chat-message-list-wrapper {
   background: none repeat scroll 0 0 $wrapperBgColor;
   border: 1px solid $wrapperBorderColor;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: $borderRadius;
+  max-width: 640px;
   padding: 10px 0;
 }
 
@@ -202,8 +248,8 @@ ul.chat-message-list {
 .bs-callout {
   margin: 10px 0;
   padding: 10px;
-  border-left: 5px solid #cccccc;
-  background: whitesmoke;
+  border-left: 5px solid $messageBorderLeftColor;
+  background: $messageBgColor;
 
   h4 {
     margin-top: 0;
@@ -211,7 +257,7 @@ ul.chat-message-list {
 
   .sender-name, 
   .time {
-    color: #999;
+    color: $messageMetaDataColor;
   }
 
   p:last-child {
@@ -219,7 +265,7 @@ ul.chat-message-list {
   }
   
   .highlight {
-    background-color: #fff;
+    background-color: $messageHighlight;
   }
 
 }
@@ -227,20 +273,20 @@ ul.chat-message-list {
 /* Variations */
 
 .bs-callout-counselor {
-  border-left: 5px solid #4cae4c;
-  background-color: #f4faf4;
+  border-left: 5px solid $messageCounselorBLColor;
+  background-color: $messageCounselorBgColor;
 
   .sender-name, .time {
-    color: #a3d7a3;
+    color: $messageCounselorMDColor;
   }
 }
 
 .bs-callout-client {
-  border-left: 5px solid #357ebd;
-  background-color: #f5f9fc;
+  border-left: 5px solid $messageClientBLColor;
+  background-color: $messageClientBgColor;
 
   .sender-name,.time {
-    color: #91bce0;
+    color: $messageClientMDColor;
   }
 
 }
