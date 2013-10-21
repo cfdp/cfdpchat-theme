@@ -74,7 +74,7 @@
         <?php print render($tabs); ?>
       <?php endif; ?>
       <?php if (!empty($page['help'])): ?>
-        <div class="well"><?php print render($page['help']); ?></div>
+        <div><?php print render($page['help']); ?></div>
       <?php endif; ?>
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
