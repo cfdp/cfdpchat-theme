@@ -1,20 +1,18 @@
 /* Sass stylesheet for the CfDP Chat theme. 
 Based on Bootstrap 2
 By benway.dk and cfdp.dk */
-/* line 26, ../sass/style.scss */
-.not-logged-in .online-status-view {
-  display: none;
-}
-
-/* Hide page title on opeka pages */
-/* line 32, ../sass/style.scss */
-.page-admin-opeka .page-header,
-.page-opeka .page-header {
-  display: none;
-}
-
+/* Hidden elements @todo: consider adding them as features to config.json
+or as theme settings
+Hide page title on opeka pages
+Hide leave room button for counselors
+Hide the close chat button from the chat view */
 /* line 37, ../sass/style.scss */
-.logged-in .leave-room-form {
+.room-size-2 .chat-toggle,
+.groupchat .chat-toggle,
+.logged-in .leave-room-form,
+.page-admin-opeka .page-header,
+.page-opeka .page-header,
+.not-logged-in .online-status-view {
   display: none;
 }
 
@@ -262,61 +260,58 @@ ul.chat-message-list {
 .bs-callout .highlight {
   background-color: white;
 }
-
-/* Variations */
+/* line 271, ../sass/style.scss */
+.bs-callout .btn-danger {
+  opacity: .2;
+}
 /* line 275, ../sass/style.scss */
-.bs-callout-counselor {
-  border-left: 5px solid #4cae4c;
-  background-color: #fff1b8;
+.bs-callout .top-info {
+  margin-bottom: .3em;
 }
 /* line 279, ../sass/style.scss */
+.bs-callout:hover .actions .btn-danger {
+  opacity: 1;
+}
+
+/* Variations */
+/* line 286, ../sass/style.scss */
+.bs-callout-counselor {
+  border-left: 5px solid #ffd31f;
+  background-color: #fff1b8;
+}
+/* line 290, ../sass/style.scss */
 .bs-callout-counselor .sender-name, .bs-callout-counselor .time {
   color: #a3d7a3;
 }
 
-/* line 284, ../sass/style.scss */
+/* line 295, ../sass/style.scss */
 .bs-callout-client {
-  border-left: 5px solid #357ebd;
+  border-left: 5px solid #bdfb00;
   background-color: #e5ff95;
 }
-/* line 288, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 .bs-callout-client .sender-name, .bs-callout-client .time {
   color: #91bce0;
 }
 
-/* line 294, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 .sender-name, .time {
   text-transform: uppercase;
   font-size: 12px;
 }
 
-/* line 299, ../sass/style.scss */
-.bs-callout .top-info {
-  margin-bottom: .3em;
-}
-
-/* line 303, ../sass/style.scss */
-.bs-callout:hover .actions .btn-danger {
-  opacity: 1;
-}
-
-/* line 307, ../sass/style.scss */
-.btn-danger {
-  opacity: .2;
-}
-
-/* line 311, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 .chat-message, .system-message {
   margin-bottom: 5px;
   padding: 5px 5px 5px 15px;
 }
 
-/* line 316, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .system-message {
   color: #999;
 }
 
-/* line 320, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .delete-message.btn-link {
   text-transform: uppercase;
   font-size: 12px;
@@ -325,30 +320,30 @@ ul.chat-message-list {
   opacity: 0.4;
 }
 
-/* line 328, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .delete-message.btn-link:hover {
   opacity: 1;
 }
 
-/* line 331, ../sass/style.scss */
+/* line 330, ../sass/style.scss */
 .chat-message, .system-message {
   margin-bottom: 5px;
   padding: 7px 10px 5px 15px;
 }
 
-/* line 336, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 .system-message {
   color: #999;
   padding-left: 20px;
 }
 
 /* Chat message form */
-/* line 343, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .message-form {
   position: relative;
 }
 
-/* line 345, ../sass/style.scss */
+/* line 344, ../sass/style.scss */
 .message-form .form-text {
   height: 60px;
   resize: none;
@@ -356,7 +351,7 @@ ul.chat-message-list {
   width: 100%;
 }
 
-/* line 352, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .paused-nowriting {
   background-color: #afafaf;
   border: 1px solid #7e7e7e;
@@ -365,7 +360,7 @@ ul.chat-message-list {
 }
 
 /* FIXED TAB - CHAT WIDGET */
-/* line 359, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .fixed-tab.well {
   height: 40px;
   right: -265px;

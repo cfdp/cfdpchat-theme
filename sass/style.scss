@@ -9,32 +9,32 @@ $wrapperBorderColor: #AFAFAF;
 $contentBgColor: #FFFFFF;
 $borderRadius: 4px;
 $bgImage: url("images/repeat_main.png");
+// Message callout colors
 $messageBgColor: whitesmoke;
 $messageCounselorBgColor: #fff1b8;
 $messageClientBgColor: #e5ff95;
+// Message callout border left colors
 $messageBorderLeftColor: #cccccc;
-$messageCounselorBLColor: #4cae4c;
-$messageClientBLColor: #357ebd;
+$messageCounselorBLColor: darken( $messageCounselorBgColor, 30% );
+$messageClientBLColor: darken( $messageClientBgColor, 30% );
+// Message callout meta data (time etc) color
 $messageMetaDataColor: #999999;
 $messageCounselorMDColor: #a3d7a3;
 $messageClientMDColor: #91bce0;
 $messageHighlight: #ffffff;
 
 
-// Hidden elements @todo: consider adding them as features to config.json
-// or as theme settings
-.not-logged-in .online-status-view {
-  display: none;
-}
-
-/* Hide page title on opeka pages */
+/* Hidden elements @todo: consider adding them as features to config.json
+or as theme settings
+Hide page title on opeka pages
+Hide leave room button for counselors
+Hide the close chat button from the chat view */
+.room-size-2 .chat-toggle,
+.groupchat .chat-toggle,
+.logged-in .leave-room-form,
 .page-admin-opeka .page-header,
-.page-opeka .page-header {
-  display: none;
-}
-
-//Hide leave room button for counselors
-.logged-in .leave-room-form {
+.page-opeka .page-header,
+.not-logged-in .online-status-view {
   display: none;
 }
 
@@ -268,6 +268,17 @@ ul.chat-message-list {
     background-color: $messageHighlight;
   }
 
+  .btn-danger {
+    opacity: .2;
+  }
+
+  .top-info {
+    margin-bottom: .3em;
+  }
+
+  &:hover .actions .btn-danger {
+    opacity: 1;
+  }
 }
 
 /* Variations */
@@ -294,18 +305,6 @@ ul.chat-message-list {
 .sender-name, .time {
   text-transform: uppercase;
   font-size: 12px;
-}
-
-.bs-callout .top-info {
-  margin-bottom: .3em;
-}
-
-.bs-callout:hover .actions .btn-danger {
-  opacity: 1;
-}
-
-.btn-danger {
-  opacity: .2;
 }
 
 .chat-message, .system-message {
