@@ -2,10 +2,62 @@
 Based on Bootstrap 2.0
 By benway.dk and cfdp.dk */
 
+$pairChatBodyBgColor: #FF9501;
+$groupChatBodyBgColor: #9dce74;
+$wrapperBgColor: #FFFFFF;
+$wrapperBorderColor: #AFAFAF;
+$contentBgColor: #FFFFFF;
+$borderRadius: 4px;
+$bgImage: url("images/repeat_main.png");
+// Message callout colors
+$messageBgColor: whitesmoke;
+$messageCounselorBgColor: #f4faf4;
+$messageClientBgColor: #f5f9fc;
+// Message callout border left colors
+$messageBorderLeftColor: #cccccc;
+$messageCounselorBLColor: darken( $messageCounselorBgColor, 40% );
+$messageClientBLColor: darken( $messageClientBgColor, 40% );
+// Message callout meta data (time etc) color
+$messageMetaDataColor: #999999;
+$messageCounselorMDColor: #a3d7a3;
+$messageClientMDColor: #91bce0;
+$messageHighlight: #ffffff;
+
+
+/* Hidden elements @todo: consider adding them as features to config.json
+or as theme settings
+Hide page title on opeka pages
+Hide leave room button for counselors
+Hide the close chat button from the chat view */
+.room-size-2 .chat-toggle,
+.groupchat .chat-toggle,
+.logged-in .leave-room-form,
+.page-admin-opeka .page-header,
+.page-opeka .page-header,
+.not-logged-in .online-status-view {
+  display: none;
+}
+
 body {
+  //background: $bgImage;
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
   font-size: 300;
+
+  &.room-size-2 {
+    //background: $pairChatBodyBgColor;
+  }
+
+  &.groupchat {
+    //background: $groupChatBodyBgColor;
+  }
+}
+
+.logged-in .opeka-chat-sidebar {
+  // background: $contentBgColor;
+  // border: 1px solid $wrapperBorderColor;
+  // border-radius: $borderRadius;
+  // padding: 10px;
 }
 
 /* Main menu */
@@ -13,12 +65,6 @@ li.expanded,
 li.collapsed,
 li.leaf {
   padding: 0;
-}
-
-/* Hide page title on opeka pages */
-.page-admin-opeka .page-header,
-.page-opeka .page-header {
-  display: none;
 }
 
 #opeka-app {
@@ -166,7 +212,7 @@ ul.user-list {
 
 /* The main chat message area */
 ul.chat-message-list {
-  background: rgb(255,255,255);
+  background: $contentBgColor;
   border: 1px solid transparent;
   border-radius: 4px;
   height: 400px;
@@ -178,7 +224,7 @@ ul.chat-message-list {
 }
 
 .chat-message-list-wrapper {
-  background: #fff;
+  background: $wrapperBgColor;
 }
 
 .chat-message,
@@ -191,8 +237,8 @@ ul.chat-message-list {
 .bs-callout {
   margin: 10px 0;
   padding: 10px;
-  border-left: 5px solid #cccccc;
-  background: whitesmoke;
+  border-left: 5px solid $messageBorderLeftColor;
+  background: $messageBgColor;
 
   h4 {
     margin-top: 0;
@@ -200,7 +246,7 @@ ul.chat-message-list {
 
   .sender-name, 
   .time {
-    color: #999;
+    color: $messageMetaDataColor;
   }
 
   p:last-child {
@@ -208,7 +254,19 @@ ul.chat-message-list {
   }
   
   .highlight {
-    background-color: #fff;
+    background-color: $messageHighlight;
+  }
+
+  .top-info {
+    margin-bottom: .3em;
+  }
+
+  &:hover .actions .btn-danger {
+    opacity: 1;
+  }
+
+  .btn-danger {
+    opacity: .2;
   }
 
 }
@@ -216,20 +274,21 @@ ul.chat-message-list {
 /* Variations */
 
 .bs-callout-counselor {
-  border-left: 5px solid #4cae4c;
-  background-color: #f4faf4;
+  border-left: 5px solid $messageCounselorBLColor;
+  //#4cae4c;
+  background-color: $messageCounselorBgColor;
 
   .sender-name, .time {
-    color: #a3d7a3;
+    color: $messageCounselorMDColor;
   }
 }
 
 .bs-callout-client {
-  border-left: 5px solid #357ebd;
-  background-color: #f5f9fc;
+  border-left: 5px solid $messageClientBLColor;
+  background-color: $messageClientBgColor;
 
   .sender-name,.time {
-    color: #91bce0;
+    color: $messageClientMDColor;
   }
 
 }
@@ -237,18 +296,6 @@ ul.chat-message-list {
 .sender-name, .time {
   text-transform: uppercase;
   font-size: 12px;
-}
-
-.bs-callout .top-info {
-  margin-bottom: .3em;
-}
-
-.bs-callout:hover .actions .btn-danger {
-  opacity: 1;
-}
-
-.btn-danger {
-  opacity: .2;
 }
 
 .chat-message, .system-message {
