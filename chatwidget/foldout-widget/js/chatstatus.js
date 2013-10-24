@@ -28,21 +28,20 @@
         return;
       }
 
-      // If there are any active one-to-one rooms (chat open).
-      if (chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
+      // If chat is open and there are active one-to-one rooms (chat open).
+      if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
         statusTab.css("color","#43B149");
         statusTab.text("Open");
         chatButton.show();
-      // If not, check if there are any busy rooms.
-      } else if (chatStatus.rooms && chatStatus.rooms.pair.full > 0) {
+      // If not, check if chat is open and there are any busy rooms.
+      } else if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.full > 0) {
         statusTab.css("color","#FBB12E");
         statusTab.text("Busy");
         chatButton.hide();
-      // For the moment we show the chat as busy as soon as the server is running
-      // @todo: make a checkbox in the admin UI where the chat can be set to "on" to replace this
+      // The chat is closed or server is not running
       } else {
         statusTab.css("color","#FBB12E");
-        statusTab.text("Busy");
+        statusTab.text("Closed");
         chatButton.hide();
       };
 

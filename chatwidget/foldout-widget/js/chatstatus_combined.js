@@ -23,15 +23,15 @@
 
     // Updates the actual status text.
     var updateDisplay = function (attributes) {
-      // If there are any active one-to-one rooms.
-      if (chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
+      // Check if chat is open and there are active one-to-one rooms.
+      if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
         statusText.text("Chat active");
 
         pairButton.show();
         statusHours.hide();
 
-      // If not, check if there are any busy (full or paused) one-to-one rooms.
-      } else if (chatStatus.rooms && chatStatus.rooms.pair.full > 0) {
+      // If not, check if chat is open and if there are any busy (full or paused) one-to-one rooms.
+      } else if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.full > 0) {
         statusText.text("Chat busy");
         pairButton.hide();
         statusHours.hide();
@@ -42,8 +42,8 @@
         statusHours.show();
       };
 
-      // Now check if there are any group rooms active
-      if (chatStatus.roomsList && chatStatus.roomsList.length) {
+      // Now check if chat is open and there are any group rooms active
+      if (chatStatus.chatOpen && chatStatus.roomsList && chatStatus.roomsList.length) {
         statusText.text("Chat active");
         groupButton.show();
         var liHtml = '';
@@ -57,8 +57,8 @@
         groupRoomList.hide();
       }
 
-      // Hide the queue list if it is disabled or empty
-      if (chatStatus.queues === false || !chatStatus.queueList) {
+      // Hide the queue list if it is disabled or empty, or the chat is closed
+      if (!chatStatus.chatOpen && chatStatus.queues === false || !chatStatus.queueList) {
         queueList.hide();
       }
       // List all queues
