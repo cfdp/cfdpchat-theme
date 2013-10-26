@@ -34,7 +34,7 @@
         statusTab.text("Open");
         chatButton.show();
       // If not, check if chat is open and there are any busy rooms.
-      } else if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.full > 0) {
+      } else if (chatStatus.chatOpen && chatStatus.rooms) {
         statusTab.css("color","#FBB12E");
         statusTab.text("Busy");
         chatButton.hide();
