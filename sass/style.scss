@@ -34,7 +34,12 @@ Hide the close chat button from the chat view */
 .logged-in .leave-room-form,
 .page-admin-opeka .page-header,
 .page-opeka .page-header,
-.not-logged-in .online-status-view {
+.not-logged-in .online-status-view,
+.room-edit-form select.queue-system,
+.room-edit-form label[for="queue-system"],
+.room-edit-form select.ip-location,
+.room-edit-form label[for="ip-location"],
+.not-logged-in.page-opeka .navbar-fixed-top {
   display: none;
 }
 
@@ -151,6 +156,18 @@ li.leaf {
 
   .chat-view-form {
     margin-top: 10px;
+  }
+}
+
+/* Fix layout for anonymous users without fixed topbar */
+.not-logged-in {
+  .app-view {
+    margin-top: 20px;
+  }
+
+  &.groupchat #opeka-app .content.client-sidebar-0,
+  &.room-size-2 #opeka-app .content.client-sidebar-0 {
+    margin-top: 40px;
   }
 }
 
@@ -354,6 +371,9 @@ ul.chat-message-list {
   border-radius: 4px; padding: 10px;
 }
 
+.footer {
+  border: 0px;
+}
 /* FIXED TAB - CHAT WIDGET */
 .fixed-tab.well {
   height: 40px;

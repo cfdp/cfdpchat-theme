@@ -2,10 +2,10 @@
   Drupal.behaviors.cfdpchatBehaviour = {
     attach: function (context, settings) {
         
-    /* note that javascript will only work on "standard" Drupal elements
-       it won't apply to the elements in the opeka chat (Node.js rendered)
-       unless a DOMchange listener is setup
-    */
+      /* Note that javascript will only work on "standard" Drupal elements
+         it won't apply to the elements in the opeka chat (dynamically rendered by Nowjs)
+         unless a DOMchange listener is setup
+      */
 
       /**
        * RIGHT SIDE TAB ANIMATION
