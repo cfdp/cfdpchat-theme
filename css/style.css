@@ -349,3 +349,23 @@ ul.chat-message-list {
   position: fixed;
   z-index: 100;
 }
+
+/* CHAT PRESENTATION PAGE */
+/* line 360, ../sass/style.scss */
+.teaser {
+  float: left;
+  margin-right: 10px;
+  width: 90%;
+}
+
+/* line 366, ../sass/style.scss */
+.teaser-wrapper {
+  overflow: hidden;
+}
+
+/* line 370, ../sass/style.scss */
+.teaser-column {
+  float: left;
+  overflow: hidden;
+  max-width: 50%;
+}
