@@ -356,3 +356,19 @@ ul.chat-message-list {
   z-index: 100;
 }
 
+/* CHAT PRESENTATION PAGE */
+.teaser {
+  float: left;
+  margin-right: 10px;
+  width: 90%;
+}
+
+.teaser-wrapper {
+  overflow: hidden;
+}
+
+.teaser-column {
+  float: left;
+  overflow: hidden;
+  max-width: 50%;
+}
