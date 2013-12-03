@@ -37,10 +37,11 @@ poll = function () {
     else if (timeout > 0) {
       poll();
       $('.status-tab').css("color","#FBB12E");
-      $('.status-tab').text("Busy");
+      $('.status-tab').text("Loading...");
     }
     else {
       // External source now.js failed to load, stop trying...
+      $('.status-tab').text("Closed");
       window.stop();
       console.log("now.js could not be loaded. Check if the Node server is running and check port number.")
       return;
