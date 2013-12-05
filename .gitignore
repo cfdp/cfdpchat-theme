@@ -12,3 +12,4 @@ sites/all/modules/simplehtmldom
 
 # Ignore Sass cache files
 .sass-cache
+.ruby-version
