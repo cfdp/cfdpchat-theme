@@ -16,5 +16,5 @@ function cfdpchat_preprocess_html(&$variables) {
 
   drupal_add_html_head($viewport, 'viewport');
 
-	drupal_add_css('http://fonts.googleapis.com/css?family=Ubuntu', array('type' => 'external'));
+	drupal_add_css('https://fonts.googleapis.com/css?family=Ubuntu', array('type' => 'external'));
 }
