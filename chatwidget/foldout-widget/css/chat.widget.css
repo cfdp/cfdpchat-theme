@@ -1,14 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Cabin);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 body {
   background-color: #F5F5F5;
   padding: 0px;
 }
 
 .status-wrapper {
-  /*background: url('../img/grid_background.png');
-  font-family: Cabin;
-  overflow: hidden;
-  width: 256px;*/
+  font-family: 'Ubuntu', sans-serif;
+
 }
 
 .status-wrapper .col-1,
@@ -50,7 +48,7 @@ body {
 }
 
 .status-info {
-  font-family: 'Cabin', sans-serif; 
+  font-family: 'Ubuntu', sans-serif; 
   font-size: 12px; 
 }
 .read-more {
@@ -61,7 +59,7 @@ body {
 }
 .read-more a {
   color: #0B5A7C; 
-  font-family: 'Cabin', sans-serif; 
+  font-family: 'Ubuntu', sans-serif; 
   font-size: 12px; 
   text-decoration: none;
 }
