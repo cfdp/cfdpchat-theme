@@ -14,8 +14,8 @@ body {
   float: left;
 }
 
-.status-header {
-
+.status-wrapper .col-1 {
+  font-size: 12px;
 }
 
 .status-tab {
@@ -24,15 +24,24 @@ body {
   width: 40px;
 }
 
-.btn.brevkasser{
+.chat-open {
+  color: #43B149;
+}
+
+.chat-busy {
+  color: #FBB12E;
+}
+
+.chat-closed {
+  color: #ED2E3A;
+}
+
+.btn.brevkasser {
   margin: 10px 0 0 25px;
 }
 
-.btn.pairchat {
-}
-
 .status-content{
-  padding: 0 8px; 
+  margin: 0 8px;
   width: 160px;
 }
 
