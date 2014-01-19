@@ -11,6 +11,8 @@
 <link href='css/chat.widget.css' rel='stylesheet' type='text/css'>
 
 <script>
+// Remember that you can't rely on jQuery or now.js being available from the start
+
 // Getting the basic connection parameters from the URL
 getURLParameter = function (name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
@@ -19,10 +21,12 @@ getURLParameter = function (name) {
 var baseURL = getURLParameter("base_url") || "http://demo.cfdpchat.dk";
 var port = getURLParameter("port") || "3000";
 
-// Testing if now.js script is being loaded - if not, stop trying
 var poll;
 var timeout = 50; // 5 seconds timeout
 
+/**
+ * Testing if now.js script is being loaded - if not, stop trying
+ */
 poll = function () {
   setTimeout(function () {
     timeout--;
@@ -36,11 +40,12 @@ poll = function () {
     }
     else if (timeout > 0) {
       poll();
-      $('.status-tab').css("color","#FBB12E");
+      $('.status-tab').removeClass('chat-closed chat-open').addClass('chat-busy');
       $('.status-tab').text("Loading...");
     }
     else {
       // External source now.js failed to load, stop trying...
+      $('.status-tab').removeClass('chat-busy chat-open').addClass('chat-closed');
       $('.status-tab').text("Closed");
       window.stop();
       console.log("now.js could not be loaded. Check if the Node server is running and check port number.")
@@ -65,7 +70,7 @@ $(document).ready(function() {
   <div class="status-wrapper">
     <div class="col-1">
       <div class="status-header">Chat</div>
-      <div class="status-tab">Loading...</div>
+      <div class="status-tab chat-busy">Loading...</div>
       <a id="join-pair-chat" class="btn btn-success pairchat hide" href="#">Enter</a>
     </div>
     <div class="col-2">

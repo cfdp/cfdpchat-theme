@@ -22,7 +22,7 @@
      //For debugging...
       var debugchat = false;
       if (debugchat) {
-        statusTab.css("color","#ED2E3A");
+        statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');
         statusTab.text("Closed");
         chatButton.hide();
         return;
@@ -30,20 +30,20 @@
 
       // If chat is open and there are active one-to-one rooms (chat open).
       if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
-        statusTab.css("color","#43B149");
+        statusTab.removeClass('chat-closed chat-busy').addClass('chat-open');
         statusTab.text("Open");
         chatButton.show();
-      // If not, check if chat is open and there are any busy rooms.
+      // If not, it might be busy? Check if chat app is open (chat busy).
       } else if (chatStatus.chatOpen && chatStatus.rooms) {
-        statusTab.css("color","#FBB12E");
+        statusTab.removeClass('chat-closed chat-open').addClass('chat-busy');
         statusTab.text("Busy");
         chatButton.hide();
-      // The chat is closed or server is not running
+      // The chat app is closed or now.js is unreachable (chat closed / no now.js).
       } else {
-        statusTab.css("color","#FBB12E");
+        statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');
         statusTab.text("Closed");
         chatButton.hide();
-      };
+      }
 
      };
      
@@ -65,7 +65,7 @@
           window.location = baseURL;
         }
         else {
-			    w.location = signInURL;
+          w.location = signInURL;
         }
       });
     });
