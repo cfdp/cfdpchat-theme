@@ -1,22 +1,24 @@
 /* Sass stylesheet for the CfDP Chat theme. 
-Based on Bootstrap 2
+Based on Bootstrap 2.0
 By benway.dk and cfdp.dk */
 
 $pairChatBodyBgColor: #FF9501;
 $groupChatBodyBgColor: #9dce74;
-$wrapperBgColor: #F5F5F5;
+$wrapperBgColor: #FFFFFF;
 $wrapperBorderColor: #AFAFAF;
 $contentBgColor: #FFFFFF;
 $borderRadius: 4px;
 $bgImage: url("images/repeat_main.png");
+// Room list colors
+$roomInfoColor: #ffffff;
 // Message callout colors
 $messageBgColor: whitesmoke;
-$messageCounselorBgColor: #fff1b8;
-$messageClientBgColor: #e5ff95;
+$messageCounselorBgColor: #f4faf4;
+$messageClientBgColor: #f5f9fc;
 // Message callout border left colors
 $messageBorderLeftColor: #cccccc;
-$messageCounselorBLColor: darken( $messageCounselorBgColor, 30% );
-$messageClientBLColor: darken( $messageClientBgColor, 30% );
+$messageCounselorBLColor: darken( $messageCounselorBgColor, 40% );
+$messageClientBLColor: darken( $messageClientBgColor, 40% );
 // Message callout meta data (time etc) color
 $messageMetaDataColor: #999999;
 $messageCounselorMDColor: #a3d7a3;
@@ -34,37 +36,26 @@ Hide the close chat button from the chat view */
 .logged-in .leave-room-form,
 .page-admin-opeka .page-header,
 .page-opeka .page-header,
-.not-logged-in .online-status-view,
-.room-edit-form select.queue-system,
-.room-edit-form label[for="queue-system"],
-.room-edit-form select.ip-location,
-.room-edit-form label[for="ip-location"],
-.not-logged-in.page-opeka .navbar-fixed-top {
+.not-logged-in .online-status-view {
   display: none;
 }
 
 body {
-  background: $bgImage;
+  //background: $bgImage;
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 300;
 
   &.room-size-2 {
-    background: $pairChatBodyBgColor;
+    //background: $pairChatBodyBgColor;
   }
 
   &.groupchat {
-    background: $groupChatBodyBgColor;
+    //background: $groupChatBodyBgColor;
   }
 }
 
 .logged-in .opeka-chat-sidebar {
-  background: $contentBgColor;
-  border: 1px solid $wrapperBorderColor;
-  border-radius: $borderRadius;
-  padding: 10px;
 }
-
 
 /* Main menu */
 li.expanded,
@@ -81,7 +72,6 @@ li.leaf {
 #opeka-app {
 
   .footer {
-    border: 0px;
     margin: 10px 0;
     padding: 10px 0;
   }
@@ -125,54 +115,37 @@ li.leaf {
       margin: 10px;
       vertical-align: middle;
     }
-
   }
 
   /* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
   .app-view {
     position: relative;
-
-    form.leave-room-form {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-    }
-
-    /* The user info and admin sidebar */
-    .sidebar {
-      margin: 30px 0 0 5px;
-    }
-
-    ul.user-list {
-      background: $wrapperBgColor;
-      list-style: none;
-      margin: 0px;
-
-      li {
-        border-bottom: 1px solid #e3e3e3;
-        padding: 5px;
-      }
-
-      li i {
-        padding-left: 5px;
-      }
-    }
   }
 
-  .chat-view-form {
-    margin-top: 10px;
-  }
-}
-
-/* Fix layout for anonymous users without fixed topbar */
-.not-logged-in {
-  .app-view {
-    margin-top: 20px;
+  .app-view form.leave-room-form {
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
 
-  &.groupchat #opeka-app .content.client-sidebar-0,
-  &.room-size-2 #opeka-app .content.client-sidebar-0 {
-    margin-top: 40px;
+  /* The user info and admin sidebar */
+  .app-view .sidebar {
+    margin: 30px 0 0 5px;
+  }
+
+  ul.user-list {
+    background: $wrapperBgColor;
+    list-style: none;
+    margin: 0px;
+
+    li {
+      border-bottom: 1px solid #e3e3e3;
+      padding: 5px;
+    }
+
+    li i {
+      padding-left: 5px;
+    }
   }
 }
 
@@ -210,7 +183,7 @@ ul.room-list {
 
 .room-status, 
 .room-size {
-  color: #ffffff;
+  color: $roomInfoColor;
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
@@ -238,12 +211,11 @@ ul.room-list {
   float: right;
 }
 
-
-
 /* The main chat message area */
 ul.chat-message-list {
   background: $contentBgColor;
   border: 1px solid transparent;
+  border-radius: $borderRadius;
   height: 400px;
   list-style: none;
   margin: 0;
@@ -253,11 +225,7 @@ ul.chat-message-list {
 }
 
 .chat-message-list-wrapper {
-  background: none repeat scroll 0 0 $wrapperBgColor;
-  border: 1px solid $wrapperBorderColor;
-  border-radius: $borderRadius;
-  max-width: 640px;
-  padding: 10px 0;
+  background: $wrapperBgColor;
 }
 
 .chat-message,
@@ -335,7 +303,7 @@ ul.chat-message-list {
 }
 
 .system-message {
-  color: #999;
+  color: $messageMetaDataColor;
 }
 
 .delete-message.btn-link {
@@ -355,7 +323,7 @@ ul.chat-message-list {
 }
 
 .system-message {
-  color: #999;
+  color: $messageMetaDataColor;
   padding-left: 20px;
 }
 
@@ -376,9 +344,6 @@ ul.chat-message-list {
   border-radius: 4px; padding: 10px;
 }
 
-.footer {
-  border: 0px;
-}
 /* FIXED TAB - CHAT WIDGET */
 .fixed-tab.well {
   height: 40px;
@@ -390,3 +355,19 @@ ul.chat-message-list {
   z-index: 100;
 }
 
+/* CHAT PRESENTATION PAGE */
+.teaser {
+  float: left;
+  margin-right: 10px;
+  width: 90%;
+}
+
+.teaser-wrapper {
+  overflow: hidden;
+}
+
+.teaser-column {
+  float: left;
+  overflow: hidden;
+  max-width: 50%;
+}

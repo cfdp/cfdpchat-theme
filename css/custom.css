@@ -1,4 +1,83 @@
 /** Sass stylesheet for the CfDP Chat theme. 
   * Based on Bootstrap 2.0
-  * Add any custom styles for your subtheme here 
+  * Add or override any custom styles for your subtheme here 
   */
+/* line 31, ../sass/custom.scss */
+.room-edit-form select.queue-system,
+.room-edit-form label[for="queue-system"],
+.room-edit-form select.ip-location,
+.room-edit-form label[for="ip-location"],
+.not-logged-in.page-opeka .navbar-fixed-top {
+  display: none;
+}
+
+/* line 35, ../sass/custom.scss */
+body {
+  background: url("images/repeat_main.png");
+}
+/* line 38, ../sass/custom.scss */
+body.room-size-2 {
+  background: #ff9501;
+}
+/* line 42, ../sass/custom.scss */
+body.groupchat {
+  background: #9dce74;
+}
+
+/* line 47, ../sass/custom.scss */
+.logged-in .opeka-chat-sidebar {
+  background: white;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* line 56, ../sass/custom.scss */
+#opeka-app .footer {
+  border: 0px;
+}
+/* line 60, ../sass/custom.scss */
+#opeka-app .chat-view-form {
+  margin-top: 10px;
+}
+
+/* Fix layout for anonymous users without fixed topbar */
+/* line 67, ../sass/custom.scss */
+.not-logged-in .app-view {
+  margin-top: 20px;
+}
+/* line 72, ../sass/custom.scss */
+.not-logged-in.groupchat #opeka-app .content.client-sidebar-0, .not-logged-in.room-size-2 #opeka-app .content.client-sidebar-0 {
+  margin-top: 40px;
+}
+
+/* The main chat message area */
+/* line 78, ../sass/custom.scss */
+.chat-message-list-wrapper {
+  background: none repeat scroll 0 0 whitesmoke;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  max-width: 640px;
+  padding: 10px 0;
+}
+
+/* Variations */
+/* line 88, ../sass/custom.scss */
+.bs-callout-counselor {
+  border-left: 5px solid #ffd31f;
+  background-color: #fff1b8;
+}
+/* line 92, ../sass/custom.scss */
+.bs-callout-counselor .sender-name, .bs-callout-counselor .time {
+  color: #a3d7a3;
+}
+
+/* line 97, ../sass/custom.scss */
+.bs-callout-client {
+  border-left: 5px solid #bdfb00;
+  background-color: #e5ff95;
+}
+/* line 101, ../sass/custom.scss */
+.bs-callout-client .sender-name, .bs-callout-client .time {
+  color: #91bce0;
+}
