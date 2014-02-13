@@ -170,6 +170,11 @@ ul.room-list {
   margin: 20px 0px 0px 0px;
 }
 
+ul.room-list a.admin-enter {
+  float: right;
+  padding: 10px 0 0 0;
+}
+
 .room {
   clear: both;
   overflow: hidden;

@@ -143,19 +143,25 @@ ul.room-list {
 }
 
 /* line 173, ../sass/base.scss */
+ul.room-list a.admin-enter {
+  float: right;
+  padding: 10px 0 0 0;
+}
+
+/* line 178, ../sass/base.scss */
 .room {
   clear: both;
   overflow: hidden;
   margin-bottom: 20px;
 }
 
-/* line 179, ../sass/base.scss */
+/* line 184, ../sass/base.scss */
 .room-details {
   padding: 10px;
   width: 70px;
 }
 
-/* line 185, ../sass/base.scss */
+/* line 190, ../sass/base.scss */
 .room-status,
 .room-size {
   color: white;
@@ -167,13 +173,13 @@ ul.room-list {
   text-transform: uppercase;
 }
 
-/* line 196, ../sass/base.scss */
+/* line 201, ../sass/base.scss */
 .room-details,
 .room-description {
   float: left;
 }
 
-/* line 200, ../sass/base.scss */
+/* line 205, ../sass/base.scss */
 .room-description {
   display: inline-block;
   font-size: 16px;
@@ -182,7 +188,7 @@ ul.room-list {
   padding: 10px 5px;
 }
 
-/* line 209, ../sass/base.scss */
+/* line 214, ../sass/base.scss */
 .room-enter,
 .meantime {
   display: inline-block;
@@ -190,7 +196,7 @@ ul.room-list {
 }
 
 /* The main chat message area */
-/* line 215, ../sass/base.scss */
+/* line 220, ../sass/base.scss */
 ul.chat-message-list {
   background: white;
   border: 1px solid transparent;
@@ -203,12 +209,12 @@ ul.chat-message-list {
   max-width: 640px;
 }
 
-/* line 227, ../sass/base.scss */
+/* line 232, ../sass/base.scss */
 .chat-message-list-wrapper {
   background: white;
 }
 
-/* line 232, ../sass/base.scss */
+/* line 237, ../sass/base.scss */
 .chat-message,
 .system-message {
   margin-bottom: 5px;
@@ -216,82 +222,82 @@ ul.chat-message-list {
 }
 
 /* Common styles for all types */
-/* line 238, ../sass/base.scss */
+/* line 243, ../sass/base.scss */
 .bs-callout {
   margin: 10px 0;
   padding: 10px;
   border-left: 5px solid #cccccc;
   background: whitesmoke;
 }
-/* line 244, ../sass/base.scss */
+/* line 249, ../sass/base.scss */
 .bs-callout h4 {
   margin-top: 0;
 }
-/* line 249, ../sass/base.scss */
+/* line 254, ../sass/base.scss */
 .bs-callout .sender-name,
 .bs-callout .time {
   color: #999999;
 }
-/* line 253, ../sass/base.scss */
+/* line 258, ../sass/base.scss */
 .bs-callout p:last-child {
   margin-bottom: 0;
 }
-/* line 257, ../sass/base.scss */
+/* line 262, ../sass/base.scss */
 .bs-callout .highlight {
   background-color: white;
 }
-/* line 261, ../sass/base.scss */
+/* line 266, ../sass/base.scss */
 .bs-callout .btn-danger {
   opacity: .2;
 }
-/* line 265, ../sass/base.scss */
+/* line 270, ../sass/base.scss */
 .bs-callout .top-info {
   margin-bottom: .3em;
 }
-/* line 269, ../sass/base.scss */
+/* line 274, ../sass/base.scss */
 .bs-callout:hover .actions .btn-danger {
   opacity: 1;
 }
 
 /* Variations */
-/* line 276, ../sass/base.scss */
+/* line 281, ../sass/base.scss */
 .bs-callout-counselor {
   border-left: 5px solid #68ba68;
   background-color: #f4faf4;
 }
-/* line 280, ../sass/base.scss */
+/* line 285, ../sass/base.scss */
 .bs-callout-counselor .sender-name, .bs-callout-counselor .time {
   color: #a3d7a3;
 }
 
-/* line 285, ../sass/base.scss */
+/* line 290, ../sass/base.scss */
 .bs-callout-client {
   border-left: 5px solid #589bcd;
   background-color: #f5f9fc;
 }
-/* line 289, ../sass/base.scss */
+/* line 294, ../sass/base.scss */
 .bs-callout-client .sender-name, .bs-callout-client .time {
   color: #91bce0;
 }
 
-/* line 295, ../sass/base.scss */
+/* line 300, ../sass/base.scss */
 .sender-name, .time {
   text-transform: uppercase;
   font-size: 12px;
 }
 
-/* line 300, ../sass/base.scss */
+/* line 305, ../sass/base.scss */
 .chat-message, .system-message {
   margin-bottom: 5px;
   padding: 5px 5px 5px 15px;
 }
 
-/* line 305, ../sass/base.scss */
+/* line 310, ../sass/base.scss */
 .system-message {
   color: #999999;
 }
 
-/* line 309, ../sass/base.scss */
+/* line 314, ../sass/base.scss */
 .delete-message.btn-link {
   text-transform: uppercase;
   font-size: 12px;
@@ -300,30 +306,30 @@ ul.chat-message-list {
   opacity: 0.4;
 }
 
-/* line 317, ../sass/base.scss */
+/* line 322, ../sass/base.scss */
 .delete-message.btn-link:hover {
   opacity: 1;
 }
 
-/* line 320, ../sass/base.scss */
+/* line 325, ../sass/base.scss */
 .chat-message, .system-message {
   margin-bottom: 5px;
   padding: 7px 10px 5px 15px;
 }
 
-/* line 325, ../sass/base.scss */
+/* line 330, ../sass/base.scss */
 .system-message {
   color: #999999;
   padding-left: 20px;
 }
 
 /* Chat message form */
-/* line 332, ../sass/base.scss */
+/* line 337, ../sass/base.scss */
 .message-form {
   position: relative;
 }
 
-/* line 334, ../sass/base.scss */
+/* line 339, ../sass/base.scss */
 .message-form .form-text {
   height: 60px;
   resize: none;
@@ -331,7 +337,7 @@ ul.chat-message-list {
   width: 100%;
 }
 
-/* line 341, ../sass/base.scss */
+/* line 346, ../sass/base.scss */
 .paused-nowriting {
   background-color: #afafaf;
   border: 1px solid #7e7e7e;
@@ -340,7 +346,7 @@ ul.chat-message-list {
 }
 
 /* FIXED TAB - CHAT WIDGET */
-/* line 348, ../sass/base.scss */
+/* line 353, ../sass/base.scss */
 .fixed-tab.well {
   height: 40px;
   right: -265px;
@@ -352,19 +358,19 @@ ul.chat-message-list {
 }
 
 /* CHAT PRESENTATION PAGE */
-/* line 359, ../sass/base.scss */
+/* line 364, ../sass/base.scss */
 .teaser {
   float: left;
   margin-right: 10px;
   width: 90%;
 }
 
-/* line 365, ../sass/base.scss */
+/* line 370, ../sass/base.scss */
 .teaser-wrapper {
   overflow: hidden;
 }
 
-/* line 369, ../sass/base.scss */
+/* line 374, ../sass/base.scss */
 .teaser-column {
   float: left;
   overflow: hidden;
