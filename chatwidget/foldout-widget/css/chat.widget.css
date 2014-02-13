@@ -17,25 +17,26 @@ body {
 }
 
 .status-wrapper .col-1 {
-  font-size: 12px;
+
 }
 
 .status-tab {
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 12px;
+  height: 256px;
   width: 40px;
+  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/red.png);
 }
 
 .chat-open {
-  color: #43B149;
+  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/green.png);
 }
 
 .chat-busy {
-  color: #FBB12E;
+  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/yellow.png);
 }
 
 .chat-closed {
-  color: #ED2E3A;
+  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/red.png);
 }
 
 .btn.brevkasser {

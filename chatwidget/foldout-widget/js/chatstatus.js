@@ -31,31 +31,26 @@
       // If chat is open and there are active one-to-one rooms (chat open).
       if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
         statusTab.removeClass('chat-closed chat-busy').addClass('chat-open');
-        statusTab.text('Open');
         chatButton.show();
       }
       // The chat app is not initialized yet
       else if ($.isEmptyObject(chatStatus)) {
         statusTab.removeClass('chat-closed chat-open').addClass('chat-busy');
-        statusTab.text('Loading...');
         chatButton.hide();
       }
       // If not, it might be busy? Check if chat app is turned on (chat busy).
       else if (chatStatus.chatOpen) {
         statusTab.removeClass('chat-closed chat-open').addClass('chat-busy');
-        statusTab.text('Busy');
         chatButton.hide();
       }
       // The chat app not turned on or is not initialized / unreachable (no now.js).
       else if (chatStatus === 'undefined' || !chatStatus.chatOpen){
         statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');
-        statusTab.text('Closed');
         chatButton.hide();
         console.log('Chat app is not turned on or chatStatus is undefined, chatStatus: ', chatStatus);
       }
       else {
         statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');
-        statusTab.text('Closed');
         chatButton.hide();
         console.log('Error - chatStatus: ', chatStatus);
       }

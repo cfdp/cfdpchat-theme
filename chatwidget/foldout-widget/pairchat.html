@@ -41,12 +41,10 @@ poll = function () {
     else if (timeout > 0) {
       poll();
       $('.status-tab').removeClass('chat-closed chat-open').addClass('chat-busy');
-      $('.status-tab').text("Loading...");
     }
     else {
       // External source now.js failed to load, stop trying...
       $('.status-tab').removeClass('chat-busy chat-open').addClass('chat-closed');
-      $('.status-tab').text("Closed");
       window.stop();
       console.log("now.js could not be loaded. Check if the Node server is running and verify port number.")
       return;
@@ -69,9 +67,7 @@ $(document).ready(function() {
 <body>
   <div class="status-wrapper">
     <div class="col-1">
-      <div class="status-header">Chat</div>
-      <div class="status-tab chat-busy">Loading...</div>
-      <a id="join-pair-chat" class="btn btn-success pairchat hide" href="#">Enter</a>
+      <div class="status-tab chat-busy"></div>
     </div>
     <div class="col-2">
       <div class="status-content">
@@ -83,6 +79,7 @@ $(document).ready(function() {
           <li>Thursday 13-16 & 18-21</li>
           <li>Friday  13-16</li>
         </ul>
+        <a id="join-pair-chat" class="btn btn-success pairchat hide" href="#">Enter</a>
       </div>
     </div>
   </div>
