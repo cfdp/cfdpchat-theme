@@ -15,20 +15,20 @@
   // When the DOM is ready, set up the widget.
   $(function () {
     var statusText = $('#status'),
+        statusTab = $('.status-tab'),
         statusHours = $('.status-content'),
-        pairButton = $('#join-pair-chat'),
         groupButton = $('#join-group-chat'),
         groupRoomList = $('#group-chat-rooms'),
         queueList = $("#queue-list");
 
     // Updates the actual status text.
     var updateDisplay = function (attributes) {
+      var liHtml = '';
 
       // Now check if chat is open and there are any group rooms active
       if (chatStatus.chatOpen && chatStatus.roomsList && chatStatus.roomsList.length) {
         statusTab.removeClass('chat-closed chat-busy').addClass('chat-open');
         groupButton.show();
-        var liHtml = '';
         $.each(chatStatus.roomsList, function(i, room) {
           liHtml += '<li>' + room.name + ' (' + room.memberCount + ' &#47; ' + room.maxSize + ')</li>';
         });
@@ -47,7 +47,7 @@
       }
       // List all queues
       else {
-        var liHtml = '';
+        liHtml = '';
         $.each(chatStatus.queueList, function(i, queue) {
           liHtml += '<li>' + queue.name + ' (' + queue.inQueue + ' in queue) <button id="' + i +  '" class="btn btn-success"' +'">Queue up</button></li>';
         });
@@ -62,43 +62,22 @@
     groupButton.click(function() {
 
       if(!$.browser.opera){
-        var w = open_window('_blank', opeka_baseURL+'/opeka', 600, 700);
+        var w = open_window('_blank', baseURL+'/opeka', 600, 700);
       } else {
-        window.parent.location = opeka_baseURL+"/chat-on-opera";
+        window.parent.location = baseURL+"/chat-on-opera";
       }
-
-      window.location = chatStatus.chatPageURL;
     });
 
     queueList.delegate('ul button', 'click', function() {
+      var w;
       if(!$.browser.opera){
-        var w = open_window('_blank', opeka_baseURL+'/opeka', 600, 700);
+        w = open_window('_blank', baseURL+'/opeka', 600, 700);
       } else {
-        window.parent.location = opeka_baseURL+"/chat-on-opera";
+        window.parent.location = baseURL+"/chat-on-opera";
       }
 
       var queueId = $(this).attr('id');
       w.location = chatStatus.chatPageURL + '#signIn/queues/' + queueId;
-    });
-
-
-    // When the user clicks the button, ask the chat server to join a room.
-    chatButton.click(function () {
-      if(!$.browser.opera){
-        var w = open_window('_blank', opeka_baseURL+'/opeka', 600, 700);
-      } else {
-        window.parent.location = opeka_baseURL+"/chat-on-opera";
-      }
-
-      now.getDirectSignInURL('pair', function (signInURL) {
-        if (!(chatStatus.rooms && chatStatus.rooms.pair.active > 0) && !(chatStatus.rooms && chatStatus.rooms.pair.full > 0)) {
-          w.close();
-          window.location = opeka_baseURL;
-        }
-        else {
-          w.location = signInURL;
-        }
-      });
     });
 
     // Run updateDisplay once manually so we have the initial text
@@ -106,3 +85,19 @@
     updateDisplay();
   });
 }(jQuery));
+
+// Build pop-up window
+function open_window(window_name,file_name,width,height) {
+  parameters = 'width=' + width;
+  parameters = parameters + ',height=' + height;
+  parameters = parameters + ',status=no';
+  parameters = parameters + ',resizable=no';
+  parameters = parameters + ',scrollbars=no';
+  parameters = parameters + ',menubar=no';
+  parameters = parameters + ',toolbar=no';
+  parameters = parameters + ',directories=no';
+  parameters = parameters + ',location=no';
+
+  vindue = window.open(file_name,window_name,parameters);
+  return vindue;
+}

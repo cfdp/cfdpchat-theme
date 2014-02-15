@@ -15,16 +15,16 @@
 body {
   background: url("images/repeat_main.png");
 }
-/* line 38, ../sass/custom.scss */
-body.room-size-2 {
+/* line 39, ../sass/custom.scss */
+body.room-size-2, body.pair {
   background: #ff9501;
 }
-/* line 42, ../sass/custom.scss */
+/* line 43, ../sass/custom.scss */
 body.groupchat {
   background: #9dce74;
 }
 
-/* line 47, ../sass/custom.scss */
+/* line 48, ../sass/custom.scss */
 .logged-in .opeka-chat-sidebar {
   background: white;
   border: 1px solid #afafaf;
@@ -32,31 +32,35 @@ body.groupchat {
   padding: 10px;
 }
 
-/* line 55, ../sass/custom.scss */
+/* line 57, ../sass/custom.scss */
 #opeka-app .app-view .sidebar {
   margin: 0 0 0 5px;
 }
-/* line 59, ../sass/custom.scss */
+/* line 61, ../sass/custom.scss */
+#opeka-app .app-view form.leave-room-form {
+  top: -40px;
+}
+/* line 66, ../sass/custom.scss */
 #opeka-app .footer {
   border: 0px;
 }
-/* line 63, ../sass/custom.scss */
+/* line 70, ../sass/custom.scss */
 #opeka-app .chat-view-form {
   margin-top: 10px;
 }
+/* line 74, ../sass/custom.scss */
+#opeka-app .welcome-message {
+  text-align: center;
+}
 
 /* Fix layout for anonymous users without fixed topbar */
-/* line 70, ../sass/custom.scss */
+/* line 81, ../sass/custom.scss */
 .not-logged-in .app-view {
-  margin-top: 20px;
-}
-/* line 75, ../sass/custom.scss */
-.not-logged-in.groupchat #opeka-app .content.client-sidebar-0, .not-logged-in.room-size-2 #opeka-app .content.client-sidebar-0 {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 /* The main chat message area */
-/* line 81, ../sass/custom.scss */
+/* line 87, ../sass/custom.scss */
 .chat-message-list-wrapper {
   background: none repeat scroll 0 0 whitesmoke;
   border: 1px solid #afafaf;
@@ -66,22 +70,22 @@ body.groupchat {
 }
 
 /* Variations */
-/* line 91, ../sass/custom.scss */
+/* line 97, ../sass/custom.scss */
 .bs-callout-counselor {
   border-left: 5px solid #ffd31f;
   background-color: #fff1b8;
 }
-/* line 95, ../sass/custom.scss */
+/* line 101, ../sass/custom.scss */
 .bs-callout-counselor .sender-name, .bs-callout-counselor .time {
   color: #a3d7a3;
 }
 
-/* line 100, ../sass/custom.scss */
+/* line 106, ../sass/custom.scss */
 .bs-callout-client {
   border-left: 5px solid #bdfb00;
   background-color: #e5ff95;
 }
-/* line 104, ../sass/custom.scss */
+/* line 110, ../sass/custom.scss */
 .bs-callout-client .sender-name, .bs-callout-client .time {
   color: #91bce0;
 }

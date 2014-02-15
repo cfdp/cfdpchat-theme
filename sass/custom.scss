@@ -35,7 +35,8 @@ $messageHighlight: #ffffff;
 body {
   background: $bgImage;
 
-  &.room-size-2 {
+  &.room-size-2,
+  &.pair {
     background: $pairChatBodyBgColor;
   }
 
@@ -52,8 +53,14 @@ body {
 }
 
 #opeka-app {
-  .app-view .sidebar {
-    margin: 0 0 0 5px;
+  .app-view {
+    .sidebar {
+      margin: 0 0 0 5px;
+    }
+
+    form.leave-room-form {
+      top: -40px;
+    }
   }
 
   .footer {
@@ -63,17 +70,16 @@ body {
   .chat-view-form {
     margin-top: 10px;
   }
+
+  .welcome-message {
+    text-align: center;
+  }
 }
 
 /* Fix layout for anonymous users without fixed topbar */
 .not-logged-in {
   .app-view {
-    margin-top: 20px;
-  }
-
-  &.groupchat #opeka-app .content.client-sidebar-0,
-  &.room-size-2 #opeka-app .content.client-sidebar-0 {
-    margin-top: 40px;
+      margin-top: 60px;
   }
 }
 
