@@ -62,7 +62,7 @@
     groupButton.click(function() {
 
       if(!$.browser.opera){
-        var w = open_window('_blank', baseURL+'/opeka', 600, 700);
+        var w = open_window('_blank', baseURL+'/opeka/signIn/groupChat', 600, 700);
       } else {
         window.parent.location = baseURL+"/chat-on-opera";
       }
