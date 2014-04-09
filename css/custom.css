@@ -3,26 +3,26 @@
   * Add any custom styles for your subtheme here 
   */
 /* Hide the following elements */
-/* line 13, ../sass/custom.scss */
+/* line 15, ../sass/custom.scss */
 .not-logged-in #navbar {
   display: none;
 }
 
-/* line 17, ../sass/custom.scss */
+/* line 19, ../sass/custom.scss */
 body {
   background: #e8b567;
-  background: url("../img/black_lozenge.png") repeat;
+  background: url("../img/body-bg.png") repeat;
 }
 
 /* Sign in view */
-/* line 23, ../sass/custom.scss */
+/* line 25, ../sass/custom.scss */
 .signin-view {
   max-width: 500px;
 }
-/* line 26, ../sass/custom.scss */
+/* line 28, ../sass/custom.scss */
 .signin-view .welcome-message {
   text-align: center;
-  background-color: #3EAFB5;
+  background-color: #0b5a7c;
   padding: 10px;
   color: white;
   font-size: 18px;
@@ -34,13 +34,13 @@ body {
 }
 
 /* The main chat message area */
-/* line 39, ../sass/custom.scss */
+/* line 41, ../sass/custom.scss */
 ul.chat-message-list {
   margin-bottom: 10px;
   max-width: none;
 }
 
-/* line 44, ../sass/custom.scss */
+/* line 46, ../sass/custom.scss */
 .message-form .form-text {
   max-width: none;
 }

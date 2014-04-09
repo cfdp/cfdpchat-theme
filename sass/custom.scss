@@ -2,6 +2,8 @@
   * Based on Bootstrap 2.0
   * Add any custom styles for your subtheme here 
   */
+ 
+$primaryColor: #0B5A7C;
 
 @mixin rounded($radius: 4px) {
   -webkit-border-radius: $radius;
@@ -16,7 +18,7 @@
 
 body {
 	background: rgb(232,181,103);
-	background: url("../img/black_lozenge.png") repeat;
+	background: url("../img/body-bg.png") repeat;
 }
 
 /* Sign in view */
@@ -25,7 +27,7 @@ body {
 
   .welcome-message {
     text-align: center;
-    background-color: #3EAFB5;
+    background-color: $primaryColor;
     padding: 10px;
     color: white;
     font-size: 18px;
