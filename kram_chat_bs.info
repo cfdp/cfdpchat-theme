@@ -1,4 +1,4 @@
-name = Kram Chat theme v. 1
+name = Kram Chat theme v. 1.0
 description = A Bootstrap Sub-theme for the Opeka chat.
 core = 7.x
 base theme = bootstrap
