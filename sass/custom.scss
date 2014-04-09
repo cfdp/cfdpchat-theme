@@ -2,3 +2,45 @@
   * Based on Bootstrap 2.0
   * Add any custom styles for your subtheme here 
   */
+
+@mixin rounded($radius: 4px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Hide the following elements */
+.not-logged-in #navbar {
+  display: none;
+}
+
+body {
+	background: rgb(232,181,103);
+	background: url("../img/black_lozenge.png") repeat;
+}
+
+/* Sign in view */
+.signin-view {
+  max-width: 500px;
+
+  .welcome-message {
+    text-align: center;
+    background-color: #3EAFB5;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    margin: 0 70px -5px;
+    font-weight: bold;
+    @include rounded(4px);
+  }
+}
+
+/* The main chat message area */
+ul.chat-message-list {
+	margin-bottom: 10px;
+  max-width: none;
+}
+
+.message-form .form-text {
+	max-width: none;
+}

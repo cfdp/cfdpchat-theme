@@ -1,4 +1,4 @@
-name = CfDP Chat theme 0.2
+name = Kram Chat theme v. 1
 description = A Bootstrap Sub-theme for the Opeka chat.
 core = 7.x
 base theme = bootstrap
@@ -17,6 +17,7 @@ regions[fixed_tab]      = 'Fixed Tab'
 ; Stylesheets
 stylesheets[all][] = css/base.css
 stylesheets[all][] = css/custom.css
+stylesheets[all][] = css/bootstrap-buttons.css
 stylesheets[all][] = css/jquery-ui-1.10.0.custom.css
 stylesheets[all][] = css/jquery.ui.1.10.0.ie.css
 
