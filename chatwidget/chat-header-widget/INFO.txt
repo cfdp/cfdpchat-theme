@@ -1,0 +1,4 @@
+The purpose of this file is to describe where is the widget used.
+
+This widget is used on netstof.dk in the header region.
+It is only displayed when the chat is open.

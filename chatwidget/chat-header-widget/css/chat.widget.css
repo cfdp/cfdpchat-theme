@@ -1,0 +1,16 @@
+body,
+.status-wrapper {
+  background: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.btn.pairchat {
+  display: none;
+  width: 210px; height: 86px;
+  background: url(http://netstof.curachat.com/sites/all/themes/netstof-chat-theme/chatwidget/chat-header-widget/img/chat-open-header.png);
+  /*Hide text*/
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
