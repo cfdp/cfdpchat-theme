@@ -16,7 +16,7 @@ getURLParameter = function (name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
 }
 
-var baseURL = getURLParameter("base_url") || "http://ch.cfdpchat.dk";
+var baseURL = getURLParameter("base_url") || "http://ch.curachat.com";
 var port = getURLParameter("port") || "3007";
 
 var poll;
