@@ -1,0 +1,5 @@
+The purpose of this file is to describe where is the widget used.
+
+This widget is used on all cyberhus.dk pages in the header region.
+The schedule data is stored as a JSON array and it is used to determine
+the visibility/accessability of the widget.
