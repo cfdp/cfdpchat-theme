@@ -1,0 +1,50 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+.status-wrapper {
+  background: #efefef;
+  max-height: 162px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.btn {
+  background: #0B5A7C;
+  border-radius: 5px;
+  border-width: 0;
+  color: #FFF; display:
+  inline-block;
+  font-family: 'Cabin', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 20px 0 0;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn.brevkasser {
+}
+
+.btn.pairchat {
+  display: none;
+}
+.status-content {
+  padding: 10px;
+}
+
+.status-tab {
+  background:url("../img/chat-close.png") no-repeat #fe6421;
+  float: left;
+  height: 162px;
+  width: 41px;
+}
+
+.status-info {
+  font-family: 'Cabin', sans-serif;
+  font-size: 13px;
+  margin: 8px 0 4px;
+}
