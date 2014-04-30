@@ -1,0 +1,5 @@
+The purpose of this file is to describe where the widget is used.
+It reacts only on group chats taking place at kram-chat.curachat.com
+
+This widget is used on all cyberhus.dk pages in the tabs right region and 
+is revealed only on a mouse over action.
