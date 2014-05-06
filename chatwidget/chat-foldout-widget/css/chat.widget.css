@@ -4,6 +4,7 @@ body {
   padding: 0px;
 }
 
+.hide {display: none;}
 .status-wrapper {
   font-family: 'Ubuntu', sans-serif;
 

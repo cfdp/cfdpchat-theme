@@ -23,25 +23,7 @@
 
     // Updates the actual status text.
     var updateDisplay = function (attributes) {
-      // Check if chat is open and there are active one-to-one rooms.
-      if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.active > 0) {
-        statusText.text("Chat active");
-
-        pairButton.show();
-        statusHours.hide();
-
-      // If not, check if chat is open and if there are any busy (full or paused) one-to-one rooms.
-      } else if (chatStatus.chatOpen && chatStatus.rooms && chatStatus.rooms.pair.full > 0) {
-        statusText.text("Chat busy");
-        pairButton.hide();
-        statusHours.hide();
-
-      } else {
-        statusText.text("Chat not active");
-        pairButton.hide();
-        statusHours.show();
-      };
-
+      console.log("s", chatStatus);
       // Now check if chat is open and there are any group rooms active
       if (chatStatus.chatOpen && chatStatus.roomsList && chatStatus.roomsList.length) {
         statusText.text("Chat active");
@@ -55,6 +37,7 @@
       else {
         groupButton.hide();
         groupRoomList.hide();
+        statusText.text("Chat not active");
       }
 
       // Hide the queue list if it is disabled or empty, or the chat is closed
@@ -76,7 +59,7 @@
     $(window).bind('opekaChatStatusUpdate', updateDisplay);
 
     // When the user clicks the button, ask the chat server to join a room.
-    pairButton.click(function () {
+    /*pairButton.click(function () {
 
       if(!$.browser.opera){
         var w = open_window('_blank', opeka_baseURL+'/opeka', 600, 700);
@@ -87,7 +70,7 @@
       now.getDirectSignInURL('pair', function (signInURL) {
         w.location = signInURL;
       });
-    });
+    });*/
 
     groupButton.click(function() {
 
@@ -113,7 +96,7 @@
 
 
     // When the user clicks the button, ask the chat server to join a room.
-    chatButton.click(function () {
+    pairButton.click(function () {
       if(!$.browser.opera){
         var w = open_window('_blank', opeka_baseURL+'/opeka', 600, 700);
       } else {
