@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+body {
+  background-color: #F5F5F5;
+  padding: 0px;
+}
+
+.status-wrapper {
+}
+
+.status-wrapper .col-1,
+.status-wrapper .col-2 {
+  float: left;
+}
+
+.status-wrapper .col-1 {
+
+}
+.hide {
+  display: none;
+}
+
+.status-tab {
+  font-size: 12px;
+  height: 162px;
+  width: 40px;
+  background: url(../img/gruppe-closed.png);
+}
+
+.chat-open {
+  background: url(../img/gruppe-open.png);
+}
+
+.chat-busy {
+  background: url(../img/gruppe-busy.png);
+}
+
+.chat-closed {
+  background: url(../img/gruppe-closed.png);
+}
+
+.btn {
+  background: #85b429;
+  color: #fff;
+  font-family: 'Cabin', sans-serif; 
+  margin-top: 25px;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.status-content{
+  margin: 0 8px;
+  width: 160px;
+}
+
+.status-content ul{
+  margin: 0;
+  padding: 0;
+}
+
+.status-content ul li{
+  font-size: 16px;
+  list-style: none;
+
+}
+
+.status-info {
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
