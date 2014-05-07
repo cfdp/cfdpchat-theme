@@ -45,11 +45,13 @@ body {
   margin-top: 25px;
   padding: 10px 15px;
   text-decoration: none;
+  width: 60%;
 }
 
 .status-content{
   margin: 0 8px;
-  width: 160px;
+  width: 200px;
+  text-align: center;
 }
 
 .status-content ul{

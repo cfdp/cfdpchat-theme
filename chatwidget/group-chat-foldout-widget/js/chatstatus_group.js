@@ -19,23 +19,27 @@
         statusInfo = $('.status-info'),
         groupButton = $('#join-group-chat');
 
+    var copyTextBusy = "<p>Velkommen til Cyberhus-gruppechat.</p><p>Chatten er optaget.</p>";
+    var copyTextClosed = "<p>Velkommen til Cyberhus-gruppechat.</p><p> &Aring;bningstider:</p><ul><li>Tirsdag 18-21</li></ul>";
+
     // Updates the actual status text.
     var updateDisplay = function (attributes) {
+      console.log(chatStatus);
       // Now check if chat is open and there are any group rooms active
       if (chatStatus.chatOpen && chatStatus.roomsList && chatStatus.roomsList.length && chatStatus.rooms.group.full == 0) {
         statusTab.removeClass('chat-closed chat-busy').addClass('chat-open');
         groupButton.css("display","inline-block");
         statusInfo.html('<p>Velkommen til Cyberhus-gruppechat.</p>');
       }
-      else if(chatStatus.chatOpen && chatStatus.roomsList && chatStatus.rooms.group.full > 0){
+      else if((chatStatus.chatOpen && chatStatus.roomsList && chatStatus.rooms.group.full > 0) || (chatStatus.chatOpen && chatStatus.roomsList.length == 0 )){
         groupButton.hide();
         statusTab.removeClass('chat-open chat-closed').addClass('chat-busy');
-        statusInfo.html('<p>Velkommen til Cyberhus-gruppechat.</p><p> &Aring;bningstider:</p><ul><li>Tirsdag 18-21</li></ul>');
+        statusInfo.html(copyTextBusy);
       }
       else {
         statusTab.removeClass('chat-open chat-busy').addClass('chat-closed');
         groupButton.hide();
-        statusInfo.html('<p>Velkommen til Cyberhus-gruppechat.</p><p> &Aring;bningstider:</p><ul><li>Tirsdag 18-21</li></ul>');
+        statusInfo.html(copyTextClosed);
       }
     };
 
@@ -57,19 +61,3 @@
     updateDisplay();
   });
 }(jQuery));
-
-// Build pop-up window
-function open_window(window_name,file_name,width,height) {
-  parameters = 'width=' + width;
-  parameters = parameters + ',height=' + height;
-  parameters = parameters + ',status=no';
-  parameters = parameters + ',resizable=no';
-  parameters = parameters + ',scrollbars=no';
-  parameters = parameters + ',menubar=no';
-  parameters = parameters + ',toolbar=no';
-  parameters = parameters + ',directories=no';
-  parameters = parameters + ',location=no';
-
-  vindue = window.open(file_name,window_name,parameters);
-  return vindue;
-}
