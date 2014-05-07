@@ -1,4 +1,5 @@
 The purpose of this file is to describe where the widget is used.
 
-This widget is used on all cyberhus.dk pages in the tabs right region and 
+This widget connects to the group chat run by Cyberhus on ch-group.curachat.com
+It is used on all cyberhus.dk pages in the tabs right region and 
 is revealed only on a mouse over action.
