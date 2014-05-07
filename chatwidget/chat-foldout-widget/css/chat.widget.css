@@ -1,13 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
 body {
   background-color: #F5F5F5;
   padding: 0px;
 }
 
-.hide {display: none;}
 .status-wrapper {
-  font-family: 'Ubuntu', sans-serif;
-
 }
 
 .status-wrapper .col-1,
@@ -16,34 +13,45 @@ body {
 }
 
 .status-wrapper .col-1 {
-  font-size: 12px;
+
+}
+.hide {
+  display: none;
 }
 
 .status-tab {
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 12px;
+  height: 162px;
   width: 40px;
+  background: url(../img/kram-closed.png);
 }
 
 .chat-open {
-  color: #43B149;
+  background: url(../img/kram-open.png);
 }
 
 .chat-busy {
-  color: #FBB12E;
+  background: url(../img/kram-busy.png);
 }
 
 .chat-closed {
-  color: #ED2E3A;
+  background: url(../img/kram-closed.png);
 }
 
-.btn.brevkasser {
-  margin: 10px 0 0 25px;
+.btn {
+  background: #85b429;
+  color: #fff;
+  font-family: 'Cabin', sans-serif; 
+  margin-top: 25px;
+  padding: 10px 15px;
+  text-decoration: none;
+  width: 60%;
 }
 
 .status-content{
   margin: 0 8px;
-  width: 160px;
+  width: 200px;
+  text-align: center;
 }
 
 .status-content ul{
@@ -52,27 +60,13 @@ body {
 }
 
 .status-content ul li{
-  font-size: 12px;
+  font-size: 16px;
   list-style: none;
 
 }
 
 .status-info {
-  font-family: 'Ubuntu', sans-serif; 
-  font-size: 12px; 
-}
-.read-more {
-  display: inline-block; 
-  margin: 10px 0 0; 
-  text-align: center; 
-  width: 100%;
-}
-.read-more a {
-  color: #0B5A7C; 
-  font-family: 'Ubuntu', sans-serif; 
-  font-size: 12px; 
-  text-decoration: none;
-}
-.read-more a:hover{
-  text-decoration: underline;
+  font-family: 'Cabin', sans-serif;
+  font-size: 16px;
+  text-align: center;
 }
