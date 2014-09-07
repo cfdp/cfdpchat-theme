@@ -9,6 +9,8 @@ $wrapperBorderColor: #AFAFAF;
 $contentBgColor: #FFFFFF;
 $borderRadius: 4px;
 $bgImage: url("images/repeat_main.png");
+$bgImagePair: url("images/bg_img_pair.png");
+$bgImageGroup: url("images/bg_img_group.png");
 // Room list colors
 $roomInfoColor: #ffffff;
 // Message callout colors
@@ -45,12 +47,18 @@ body {
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif;
 
-  &.room-size-2 {
-    //background: $pairChatBodyBgColor;
+  &.room-size-2,
+  &.pair {
+    background-color: $pairChatBodyBgColor;
+    background-image: $bgImagePair;
+    background-repeat: no-repeat;
   }
 
-  &.groupchat {
-    //background: $groupChatBodyBgColor;
+  &.groupchat,
+  &.page-opeka-signin-groupchat {
+    background-color: $groupChatBodyBgColor;
+    background-image: $bgImageGroup;
+    background-repeat: no-repeat;
   }
 }
 
@@ -375,4 +383,8 @@ ul.chat-message-list {
   float: left;
   overflow: hidden;
   max-width: 50%;
+}
+
+.footer {
+  border: none;
 }
