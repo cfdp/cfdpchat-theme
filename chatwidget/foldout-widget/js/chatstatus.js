@@ -51,13 +51,13 @@
         statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');
         statusTab.text('Closed');
         chatButton.hide();
-        console.log('Chat app is not turned on or chatStatus is undefined, chatStatus: ', chatStatus);
+        console.log('Opeka chat app is not turned on or chatStatus is undefined, chatStatus: ', chatStatus);
       }
       else {
         statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');
         statusTab.text('Closed');
         chatButton.hide();
-        console.log('Error - chatStatus: ', chatStatus);
+        console.log('Opeka chat app error - chatStatus: ', chatStatus);
       }
 
      };
