@@ -2,11 +2,11 @@
 Based on Bootstrap 2.0
 By benway.dk and cfdp.dk */
 
-$pairChatBodyBgColor: #FF9501;
-$groupChatBodyBgColor: #9dce74;
-$wrapperBgColor: #FFFFFF;
-$wrapperBorderColor: #AFAFAF;
-$contentBgColor: #FFFFFF;
+$pairChatBodyBgColor: #F8F8F8;
+$groupChatBodyBgColor: #F8F8F8;
+$wrapperBgColor: transparent;
+$wrapperBorderColor: #cccccc;
+$contentBgColor: #ffffff;
 $borderRadius: 4px;
 $bgImage: url("images/repeat_main.png");
 $bgImagePair: url("images/bg_img_pair.png");
@@ -32,14 +32,27 @@ $messageHighlight: #ffffff;
 or as theme settings
 Hide page title on opeka pages
 Hide leave room button for counselors
-Hide the close chat button from the chat view */
+Hide the close chat button from the chat view
+Hide Navbar in the chatwindow for anonymous users
+*/
 .room-size-2 .chat-toggle,
 .groupchat .chat-toggle,
 .logged-in .leave-room-form,
 .page-admin-opeka .page-header,
 .page-opeka .page-header,
-.not-logged-in .online-status-view {
+.not-logged-in .online-status-view,
+body[class^="room-size"].not-logged-in #navbar,
+body[class*=" room-size"].not-logged-in #navbar,
+.groupchat.not-logged-in #navbar{
   display: none;
+}
+
+body[class^="room-size"].not-logged-in,
+body[class*=" room-size"].not-logged-in,
+.groupchat.not-logged-in {
+  .app-view {
+    margin-top: 48px;
+  }
 }
 
 body {
@@ -52,6 +65,7 @@ body {
     background-color: $pairChatBodyBgColor;
     background-image: $bgImagePair;
     background-repeat: no-repeat;
+    background-position: 20px 5px;
   }
 
   &.groupchat,
@@ -59,9 +73,26 @@ body {
     background-color: $groupChatBodyBgColor;
     background-image: $bgImageGroup;
     background-repeat: no-repeat;
+    background-position: 20px 5px;
   }
 }
 
+/* The signin view */
+.signin-view {
+  max-width: 400px;
+}
+
+.form-horizontal .control-label {
+  width: 100px;
+}
+
+.form-horizontal .controls {
+  margin-left: 120px;
+
+  .form-text.age {
+    max-width: 60px;
+  }
+}
 .logged-in .opeka-chat-sidebar {
 }
 
@@ -129,16 +160,15 @@ li.leaf {
   .app-view {
     position: relative;
   }
-
   .app-view form.leave-room-form {
     position: absolute;
-    top: 0px;
+    top: -40px;
     right: 0px;
   }
 
   /* The user info and admin sidebar */
   .app-view .sidebar {
-    margin: 30px 0 0 5px;
+    margin: 0 0 0 5px;
   }
 
   ul.user-list {
@@ -227,13 +257,12 @@ ul.room-list a.admin-enter {
 /* The main chat message area */
 ul.chat-message-list {
   background: $contentBgColor;
-  border: 1px solid transparent;
+  border: 1px solid $wrapperBorderColor;
   border-radius: $borderRadius;
   height: 400px;
   list-style: none;
-  margin: 0;
+  margin: 0 0 10px 0;
   overflow-y: auto;
-  padding: 10px;
   max-width: 640px;
 }
 
@@ -243,13 +272,12 @@ ul.chat-message-list {
 
 .chat-message,
 .system-message {
-  margin-bottom: 5px;
+  margin: 0 10px 10px 5px;
   padding: 5px;
 }
 
 /* Common styles for all types */
 .bs-callout {
-  margin: 10px 0;
   padding: 10px;
   border-left: 5px solid $messageBorderLeftColor;
   background: $messageBgColor;
@@ -310,11 +338,6 @@ ul.chat-message-list {
   font-size: 12px;
 }
 
-.chat-message, .system-message {
-  margin-bottom: 5px;
-  padding: 5px 5px 5px 15px;
-}
-
 .system-message {
   color: $messageMetaDataColor;
 }
@@ -329,10 +352,6 @@ ul.chat-message-list {
 
 .delete-message.btn-link:hover {
   opacity: 1;
-}
-.chat-message, .system-message {
-  margin-bottom: 5px;
-  padding: 7px 10px 5px 15px;
 }
 
 .system-message {

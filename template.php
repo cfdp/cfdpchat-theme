@@ -3,7 +3,7 @@
 /**
  * @file template.php
  */
-function cfdpchat_preprocess_html(&$variables) {
+function curachat_preprocess_html(&$variables) {
 
   // Set viewport meta tag - http://www.webomelette.com/drupal-add-html-tag-head-meta-link
   $viewport = array(
