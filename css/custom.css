@@ -2,96 +2,11 @@
   * Based on Bootstrap 2.0
   * Add or override any custom styles for your subtheme here 
   */
-/* line 33, ../sass/custom.scss */
+/* line 10, ../sass/custom.scss */
 .room-edit-form select.queue-system,
 .room-edit-form label[for="queue-system"],
 .room-edit-form select.ip-location,
 .room-edit-form label[for="ip-location"],
 .not-logged-in.page-opeka .navbar-fixed-top {
   display: none;
-}
-
-/* line 37, ../sass/custom.scss */
-body {
-  background: url("images/repeat_main.png");
-}
-/* line 41, ../sass/custom.scss */
-body.room-size-2, body.pair {
-  background-color: #ff9501;
-  background-image: url("images/bg_img_pair.png");
-  background-repeat: no-repeat;
-}
-/* line 48, ../sass/custom.scss */
-body.groupchat, body.page-opeka-signin-groupchat {
-  background-color: #9dce74;
-  background-image: url("images/bg_img_group.png");
-  background-repeat: no-repeat;
-}
-
-/* line 55, ../sass/custom.scss */
-.logged-in .opeka-chat-sidebar {
-  background: white;
-  border: 1px solid #afafaf;
-  border-radius: 4px;
-  padding: 10px;
-}
-
-/* line 64, ../sass/custom.scss */
-#opeka-app .app-view .sidebar {
-  margin: 0 0 0 5px;
-}
-/* line 68, ../sass/custom.scss */
-#opeka-app .app-view form.leave-room-form {
-  top: -40px;
-}
-/* line 73, ../sass/custom.scss */
-#opeka-app .chat-view-form {
-  margin-top: 10px;
-}
-/* line 77, ../sass/custom.scss */
-#opeka-app .welcome-message {
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Fix layout for anonymous users without fixed topbar */
-/* line 85, ../sass/custom.scss */
-.not-logged-in .app-view {
-  margin-top: 60px;
-}
-
-/* The main chat message area */
-/* line 91, ../sass/custom.scss */
-.chat-message-list-wrapper {
-  background: none repeat scroll 0 0 whitesmoke;
-  border: 1px solid #afafaf;
-  border-radius: 4px;
-  max-width: 640px;
-  padding: 10px 0;
-}
-
-/* Message style variations */
-/* line 100, ../sass/custom.scss */
-.bs-callout-counselor {
-  border-left: 5px solid #ffd31f;
-  background-color: #fff1b8;
-}
-/* line 104, ../sass/custom.scss */
-.bs-callout-counselor .sender-name, .bs-callout-counselor .time {
-  color: #a3d7a3;
-}
-
-/* line 109, ../sass/custom.scss */
-.bs-callout-client {
-  border-left: 5px solid #bdfb00;
-  background-color: #e5ff95;
-}
-/* line 113, ../sass/custom.scss */
-.bs-callout-client .sender-name, .bs-callout-client .time {
-  color: #91bce0;
-}
-
-/* line 118, ../sass/custom.scss */
-.footer {
-  border: none;
 }
