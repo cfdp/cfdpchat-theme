@@ -3,20 +3,32 @@
   * Add any custom styles for your subtheme here 
   */
 
+$bgImage: url("../img/black_lozenge.png");
+
+$pairChatBodyBgColor: rgb(232,181,103);
+$groupChatBodyBgColor: rgb(232,181,103);
+
 @mixin rounded($radius: 4px) {
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
 
-/* Hide the following elements */
-.not-logged-in #navbar {
-  display: none;
-}
-
 body {
-	background: rgb(232,181,103);
-	background: url("../img/black_lozenge.png") repeat;
+  background: $bgImage;
+  
+  &.room-size-2,
+  &.pair {
+    background-color: $pairChatBodyBgColor;
+    background: $bgImage;
+  }
+
+  &.groupchat,
+  &.page-opeka-signin-groupchat {
+    background-color: $groupChatBodyBgColor;
+    background: $bgImage;
+
+  }
 }
 
 /* Sign in view */
@@ -37,10 +49,10 @@ body {
 
 /* The main chat message area */
 ul.chat-message-list {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
   max-width: none;
 }
 
 .message-form .form-text {
-	max-width: none;
+  max-width: none;
 }
