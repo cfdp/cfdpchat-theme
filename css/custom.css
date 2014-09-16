@@ -2,24 +2,27 @@
   * Based on Bootstrap 2.0
   * Add any custom styles for your subtheme here 
   */
-/* Hide the following elements */
-/* line 13, ../sass/custom.scss */
-.not-logged-in #navbar {
-  display: none;
-}
-
 /* line 17, ../sass/custom.scss */
 body {
-  background: #e8b567;
-  background: url("../img/black_lozenge.png") repeat;
+  background: url("../img/black_lozenge.png");
+}
+/* line 21, ../sass/custom.scss */
+body.room-size-2, body.pair {
+  background-color: #e8b567;
+  background: url("../img/black_lozenge.png");
+}
+/* line 27, ../sass/custom.scss */
+body.groupchat, body.page-opeka-signin-groupchat {
+  background-color: #e8b567;
+  background: url("../img/black_lozenge.png");
 }
 
 /* Sign in view */
-/* line 23, ../sass/custom.scss */
+/* line 35, ../sass/custom.scss */
 .signin-view {
   max-width: 500px;
 }
-/* line 26, ../sass/custom.scss */
+/* line 38, ../sass/custom.scss */
 .signin-view .welcome-message {
   text-align: center;
   background-color: #3EAFB5;
@@ -34,13 +37,13 @@ body {
 }
 
 /* The main chat message area */
-/* line 39, ../sass/custom.scss */
+/* line 51, ../sass/custom.scss */
 ul.chat-message-list {
   margin-bottom: 10px;
   max-width: none;
 }
 
-/* line 44, ../sass/custom.scss */
+/* line 56, ../sass/custom.scss */
 .message-form .form-text {
   max-width: none;
 }
