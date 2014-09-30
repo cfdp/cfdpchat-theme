@@ -24,7 +24,7 @@
 
     // Updates the actual status text.
     var updateDisplay = function (attributes) {
-      console.log(chatStatus);
+
       // Now check if chat is open and there are any group rooms active
       if (chatStatus.chatOpen && chatStatus.roomsList && chatStatus.roomsList.length && chatStatus.rooms.group.full == 0) {
         statusTab.removeClass('chat-closed chat-busy').addClass('chat-open');
