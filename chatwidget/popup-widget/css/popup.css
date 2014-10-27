@@ -1,0 +1,23 @@
+#cura-chat-iframe {
+  background-color: #F5F5F5;
+  border: 1px solid #d4d4d4;
+  height: 160px;
+  right: -262px;
+  top: 70%;
+  overflow: hidden;
+  padding: 10px;
+  position: fixed;
+  z-index: 100;
+}
+
+.curachat-popup {
+  float: right;
+}
+
+/* Hide block styling from the block
+ * used for showing the chat
+ */
+#block-block-27 {
+  background-color: transparent;
+  right: -50px;
+}

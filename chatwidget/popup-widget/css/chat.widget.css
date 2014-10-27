@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+body {
+  background-color: #F5F5F5;
+  padding: 0px;
+}
+
+.status-wrapper {
+  font-family: 'Cabin', sans-serif;
+  margin: 20px 0 0 45px;
+  text-transform: uppercase;
+}
+
+.status-wrapper h3 {
+  margin: 0 0 20px 0;
+
+}
+
+.status-wrapper .col-1,
+.status-wrapper .col-2 {
+  float: left;
+}
+
+.status-wrapper .col-1 {
+  font-size: 12px;
+}
+
+.status-tab {
+  font-weight: bold;
+  margin-bottom: 20px;
+  width: 40px;
+}
+
+.chat-open {
+  color: #43B149;
+}
+
+.chat-busy {
+  color: #FBB12E;
+}
+
+.chat-closed {
+  color: #ED2E3A;
+}
+
+.btn {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+  background: #0B5A7C;
+  padding: 10px 12px 10px 12px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn.brevkasser {
+  margin: 10px 0 0 25px;
+}
+
+.hide {
+  display:none;
+}
+
+.status-content{
+  margin: 20px;
+  width: 160px;
+}
+
+.status-content ul{
+  margin: 0;
+  padding: 0;
+}
+
+.status-content ul li{
+  font-size: 12px;
+  list-style: none;
+
+}
+
+.status-info {
+  font-family: 'Cabin', sans-serif; 
+  font-size: 12px; 
+}
+.read-more {
+  display: inline-block; 
+  margin: 10px 0 0; 
+  text-align: center; 
+  width: 100%;
+}
+.read-more a {
+  color: #0B5A7C; 
+  font-family: 'Cabin', sans-serif; 
+  font-size: 12px; 
+  text-decoration: none;
+}
+.read-more a:hover{
+  text-decoration: underline;
+}
