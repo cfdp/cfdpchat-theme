@@ -7,6 +7,67 @@
 .room-edit-form label[for="queue-system"],
 .room-edit-form select.ip-location,
 .room-edit-form label[for="ip-location"],
-.not-logged-in.page-opeka .navbar-fixed-top {
+.not-logged-in.page-opeka .navbar-fixed-top,
+.not-logged-in.page-opeka #opeka-app .footer,
+.logged-in .welcome-message {
   display: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body.page-opeka {
+  background-color: white;
+  background-image: url(/sites/default/files/ungeraadgivning_30px.jpg);
+  background-repeat: no-repeat;
+  background-position: 20px 15px;
+  margin-top: 30px;
+
+  .welcome-message {
+    margin-top: 50px;
+  }
+
+  .navbar-fixed-bottom {
+    margin: -85px 0 10px 20px;
+    padding: 0;
+  }
+
+  .user-feedback-view {
+    margin-top: 20px;
+  }
+}
+
+.main-container {
+  min-height: 100%;
+}
+
+.main-container > .row-fluid {
+  padding-bottom: 200px;
+}
+
+.footer.container {
+  background: url(/sites/default/files/KK_Byvaaben_Sort.png) no-repeat;
+  clear: both;
+  height: 85px;
+  margin-top: -200px;
+  padding: 10px 0 0 0;
+  position: relative;
+  z-index: -1;
+}
+
+//No gradient background in navbar
+.navbar-inner {
+  background-color: white;
+  background-image: none;
+}
+
+.navbar {
+  .logo {
+    margin-top: 10px;
+  }
+
+  .nav>li>a {
+      padding-top: 8px;
+    }
 }

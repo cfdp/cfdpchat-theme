@@ -1,43 +1,64 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
 body {
   background-color: #F5F5F5;
+  font-size: 16px;
   padding: 0px;
 }
 
-.status-wrapper {
-  font-family: 'Ubuntu', sans-serif;
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 4px 0;
+}
 
+.status-wrapper {
+  font-family: 'Cabin', sans-serif;
 }
 
 .status-wrapper .col-1,
 .status-wrapper .col-2 {
-  float: left;
-}
-
-.status-wrapper .col-1 {
-  font-size: 12px;
+  float:left;
 }
 
 .status-tab {
-  font-weight: bold;
-  margin-bottom: 20px;
+  height: 162px;
   width: 40px;
+  background: url(../img/chat-closed.png);
+}
+
+.status-info > * {
+  text-align: center;
+}
+
+.status-content a {
+  display: block;
+  font-size: 14px;
+  margin: 2px auto;
+  text-align: center;
 }
 
 .chat-open {
-  color: #43B149;
+  background: url(../img/chat-open.png);
 }
 
 .chat-busy {
-  color: #FBB12E;
+  background: url(../img/chat-busy.png);
 }
 
 .chat-closed {
-  color: #ED2E3A;
+  background: url(../img/chat-closed.png);
 }
 
-.btn.brevkasser {
-  margin: 10px 0 0 25px;
+
+.btn {
+  background: #85b429;
+  color: #fff;
+  font-family: 'Cabin', sans-serif; 
+  margin-top: 25px;
+  padding: 10px 15px;
+  text-decoration: none;
+  width: 60%;
 }
 
 .status-content{
@@ -57,7 +78,6 @@ body {
 }
 
 .status-info {
-  font-family: 'Ubuntu', sans-serif; 
   font-size: 12px; 
 }
 .read-more {
@@ -68,7 +88,6 @@ body {
 }
 .read-more a {
   color: #0B5A7C; 
-  font-family: 'Ubuntu', sans-serif; 
   font-size: 12px; 
   text-decoration: none;
 }

@@ -1,4 +1,4 @@
-/* Helper functions for the chat widget */
+/* Helper functions for the chat widgets */
 
 // Build pop-up window
 function open_window(window_name,file_name,width,height) {

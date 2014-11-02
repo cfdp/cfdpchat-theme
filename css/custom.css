@@ -2,11 +2,76 @@
   * Based on Bootstrap 2.0
   * Add or override any custom styles for your subtheme here 
   */
-/* line 10, ../sass/custom.scss */
+/* line 12, ../sass/custom.scss */
 .room-edit-form select.queue-system,
 .room-edit-form label[for="queue-system"],
 .room-edit-form select.ip-location,
 .room-edit-form label[for="ip-location"],
-.not-logged-in.page-opeka .navbar-fixed-top {
+.not-logged-in.page-opeka .navbar-fixed-top,
+.not-logged-in.page-opeka #opeka-app .footer,
+.logged-in .welcome-message {
   display: none;
+}
+
+/* line 16, ../sass/custom.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 20, ../sass/custom.scss */
+body.page-opeka {
+  background-color: white;
+  background-image: url(/sites/default/files/ungeraadgivning_30px.jpg);
+  background-repeat: no-repeat;
+  background-position: 20px 15px;
+  margin-top: 30px;
+}
+/* line 27, ../sass/custom.scss */
+body.page-opeka .welcome-message {
+  margin-top: 50px;
+}
+/* line 31, ../sass/custom.scss */
+body.page-opeka .navbar-fixed-bottom {
+  margin: -85px 0 10px 20px;
+  padding: 0;
+}
+/* line 36, ../sass/custom.scss */
+body.page-opeka .user-feedback-view {
+  margin-top: 20px;
+}
+
+/* line 41, ../sass/custom.scss */
+.main-container {
+  min-height: 100%;
+}
+
+/* line 45, ../sass/custom.scss */
+.main-container > .row-fluid {
+  padding-bottom: 200px;
+}
+
+/* line 49, ../sass/custom.scss */
+.footer.container {
+  background: url(/sites/default/files/KK_Byvaaben_Sort.png) no-repeat;
+  clear: both;
+  height: 85px;
+  margin-top: -200px;
+  padding: 10px 0 0 0;
+  position: relative;
+  z-index: -1;
+}
+
+/* line 60, ../sass/custom.scss */
+.navbar-inner {
+  background-color: white;
+  background-image: none;
+}
+
+/* line 66, ../sass/custom.scss */
+.navbar .logo {
+  margin-top: 10px;
+}
+/* line 70, ../sass/custom.scss */
+.navbar .nav > li > a {
+  padding-top: 8px;
 }
