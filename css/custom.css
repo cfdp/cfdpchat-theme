@@ -53,6 +53,7 @@ body.page-opeka .user-feedback-view {
 /* line 49, ../sass/custom.scss */
 .footer.container {
   background: url(/sites/default/files/KK_Byvaaben_Sort.png) no-repeat;
+  background-position: right;
   clear: both;
   height: 85px;
   margin-top: -200px;
@@ -61,17 +62,17 @@ body.page-opeka .user-feedback-view {
   z-index: -1;
 }
 
-/* line 60, ../sass/custom.scss */
+/* line 61, ../sass/custom.scss */
 .navbar-inner {
   background-color: white;
   background-image: none;
 }
 
-/* line 66, ../sass/custom.scss */
+/* line 67, ../sass/custom.scss */
 .navbar .logo {
   margin-top: 10px;
 }
-/* line 70, ../sass/custom.scss */
+/* line 71, ../sass/custom.scss */
 .navbar .nav > li > a {
   padding-top: 8px;
 }
