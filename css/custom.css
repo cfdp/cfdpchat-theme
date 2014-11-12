@@ -19,60 +19,73 @@ html, body {
 }
 
 /* line 20, ../sass/custom.scss */
+body {
+  padding-top: 0px;
+}
+
+/* line 25, ../sass/custom.scss */
 body.page-opeka {
   background-color: white;
-  background-image: url(/sites/default/files/ungeraadgivning_30px.jpg);
   background-repeat: no-repeat;
   background-position: 20px 15px;
-  margin-top: 30px;
 }
-/* line 27, ../sass/custom.scss */
+/* line 30, ../sass/custom.scss */
+body.page-opeka .main-container > .row-fluid {
+  padding: 0;
+}
+/* line 34, ../sass/custom.scss */
 body.page-opeka .welcome-message {
-  margin-top: 50px;
+  margin-top: 10px;
 }
-/* line 31, ../sass/custom.scss */
+/* line 38, ../sass/custom.scss */
 body.page-opeka .navbar-fixed-bottom {
   margin: -85px 0 10px 20px;
   padding: 0;
 }
-/* line 36, ../sass/custom.scss */
-body.page-opeka .user-feedback-view {
+/* line 44, ../sass/custom.scss */
+body.page-opeka .user-feedback-view,
+body.page-opeka .goodbye-view {
   margin-top: 20px;
 }
 
-/* line 41, ../sass/custom.scss */
+/* line 49, ../sass/custom.scss */
 .main-container {
   min-height: 100%;
 }
 
-/* line 45, ../sass/custom.scss */
+/* line 53, ../sass/custom.scss */
 .main-container > .row-fluid {
-  padding-bottom: 200px;
+  padding-bottom: 120px;
+  padding-top: 60px;
+  min-height: 100%;
 }
 
-/* line 49, ../sass/custom.scss */
+/* line 59, ../sass/custom.scss */
 .footer.container {
-  background: url(/sites/default/files/KK_Byvaaben_Sort.png) no-repeat;
   background-position: right;
   clear: both;
   height: 85px;
-  margin-top: -200px;
+  margin-top: -120px;
   padding: 10px 0 0 0;
   position: relative;
   z-index: -1;
 }
+/* line 69, ../sass/custom.scss */
+.footer.container .footer-img-wrapper {
+  float: right;
+}
 
-/* line 61, ../sass/custom.scss */
+/* line 75, ../sass/custom.scss */
 .navbar-inner {
   background-color: white;
   background-image: none;
 }
 
-/* line 67, ../sass/custom.scss */
+/* line 81, ../sass/custom.scss */
 .navbar .logo {
   margin-top: 10px;
 }
-/* line 71, ../sass/custom.scss */
+/* line 85, ../sass/custom.scss */
 .navbar .nav > li > a {
   padding-top: 8px;
 }
