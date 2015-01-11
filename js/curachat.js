@@ -1,5 +1,5 @@
 (function($) {
-  Drupal.behaviors.cfdpchatBehaviour = {
+  Drupal.behaviors.curachatBehaviour = {
     attach: function (context, settings) {
         
     /* note that javascript will only work on "standard" Drupal elements
@@ -8,13 +8,13 @@
     */
 
       /**
-       * RIGHT SIDE TAB ANIMATION
+       * RIGHT SIDE TAB FOLDOUT ANIMATION
        */
       var exp_w = -40;
       var exp_h = 160;
       var shr_w = -265;
       var shr_h = 40;
-      $(".fixed-tab").hover(
+      $(".front .fixed-tab").hover(
         function() {   
           $(this).stop(true,true).animate({         
             right: exp_w,
@@ -28,6 +28,32 @@
           },200); 
         }
       );
+      
+      /**
+       * RIGHT SIDE TAB POPUP ANIMATION
+       */
+      var pop_exp_w = 10;
+      var pop_exp_h = 160;
+      var pop_shr_w = -322;
+      var pop_shr_h = 160;
+      $(".page-node-2 .fixed-tab").animate({         
+        right: pop_exp_w,
+        height: pop_exp_h
+      },1000);
+      
+
+      $( ".page-node-2 .fixed-tab.well" ).prepend( "<button class='close curachat-popup'>&times;</button>" );
+       
+      $(".curachat-popup").click(function() {
+        $(".page-node-2 .fixed-tab").hide();
+      });
+//        function() {   
+//          $(this).stop(true,true).animate({      
+//            right: pop_shr_w,
+//            height: pop_shr_h
+//          },200); 
+//        }
+//      );
 
     }
   };
