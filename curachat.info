@@ -17,6 +17,7 @@ regions[fixed_tab]      = 'Fixed Tab'
 ; Stylesheets
 stylesheets[all][] = css/base.css
 stylesheets[all][] = css/custom.css
+; stylesheets[all][] = css/bootstrap-buttons.css
 stylesheets[all][] = css/jquery-ui-1.10.0.custom.css
 stylesheets[all][] = css/jquery.ui.1.10.0.ie.css
 
