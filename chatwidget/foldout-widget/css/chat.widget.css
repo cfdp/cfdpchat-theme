@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Cabin);
+@import url(https://fonts.googleapis.com/css?family=Cabin);
 body {
   background-color: #F5F5F5;
   padding: 0px;
@@ -24,19 +24,19 @@ body {
   font-size: 12px;
   height: 256px;
   width: 40px;
-  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/red.png);
+  background: url(../img/red.png);
 }
 
 .chat-open {
-  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/green.png);
+  background: url(../img/green.png);
 }
 
 .chat-busy {
-  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/yellow.png);
+  background: url(../img/yellow.png);
 }
 
 .chat-closed {
-  background: url(http://www.cyberhus.dk/sites/default/files/chatgrafik/red.png);
+  background: url(../img/red.png);
 }
 
 .btn.brevkasser {

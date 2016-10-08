@@ -1,0 +1,38 @@
+.chat-closed .login-button .btn {
+    background-color: #e67e22;
+}
+.btn.chat {
+    text-transform: uppercase;
+}
+.btn:hover {
+  background-color: #fb9a00;
+}
+
+body.page-opeka-widgets-inline.chat-open .status-wrapper {
+  background-color: #43b149;
+}
+
+
+body.page-opeka-widgets-inline.chat-busy .status-wrapper {
+  background-color: #e67e22;
+  cursor: default;
+}
+
+body.page-opeka-widgets-inline.chat-closed .status-wrapper {
+    background-color: #e67e22;
+    cursor: default;
+}
+
+body.page-opeka-widgets-header.chat-closed .status-wrapper {
+    background-color: #e67e22;
+}
+
+body.page-opeka-widgets-foldout.chat-closed .status-wrapper,
+body.page-opeka-widgets-foldout.chat-closed .name-tab {
+    background-color: #e67e22;
+}
+
+body.page-opeka-widgets a {
+  color: #fff;
+  text-decoration: underline;
+}

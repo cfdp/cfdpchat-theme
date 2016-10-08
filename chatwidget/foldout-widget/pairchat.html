@@ -18,7 +18,7 @@ getURLParameter = function (name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
 }
 
-var baseURL = getURLParameter("base_url") || "http://demo.cfdpchat.dk";
+var baseURL = getURLParameter("base_url") || "https://demo.curachat.com";
 var port = getURLParameter("port") || "3000";
 
 var poll;
@@ -73,9 +73,10 @@ $(document).ready(function() {
       <div class="status-content">
         <p class="status-info">Velkommen til Cyberhus-chatten. &Aring;bningstider:</p>
         <ul>
-          <li>Tirsdag 18-22</li>
-          <li>Onsdag  18-22</li>
-          <li>Torsdag 18-22</li>
+          <li>Mandag  14-17</li>
+          <li>Tirsdag 18-21</li>
+          <li>Onsdag  14-17</li>
+          <li>Torsdag 18-21</li>
         </ul>
         <a id="join-pair-chat" class="btn btn-success pairchat hide" href="#">G&aring; til 1-til-1 chat</a>
       </div>

@@ -39,34 +39,32 @@ poll = function() {
     }
     else if (timeout > 0) {
       poll();
-      $('#join-pair-chat').html('').removeClass('chat-open').addClass('chat-busy');
+      $('#join-pair-chat').html('Alle r&aring;dgivere er optaget').removeClass('chat-open').addClass('chat-busy');
     }
     else {
       // External source now.js failed to load, stop trying...
-      $('#join-pair-chat').html('').removeClass('chat-open').addClass('chat-closed');
-      $('#join-pair-chat').hide();
-
+      $('#join-pair-chat').html('Fejl. Ingen forbindelse').removeClass('chat-open').addClass('chat-closed');
       window.stop();
       console.log("now.js could not be loaded. Check if the Node server is running and verify port number.")
       return;
     }
-  }, 5);
+  }, 50);
 };
 
 poll();
 
 // Appending the now.js script to the DOM
 $(document).ready(function() {
-  /*var now_script = document.createElement("script");
+  var now_script = document.createElement("script");
   now_script.type = "text/javascript";
   now_script.src = baseURL + ":" + port + "/nowjs/now.js";
-  document.body.appendChild(now_script);*/
+  document.body.appendChild(now_script);
 });
 </script>
 </head>
 <body>
   <div class="status-wrapper">
-      <?php include_once "chatbar.php"; ?>
+      <?php include_once "chatbar.php"; ?> 
   </div>
 </body>
 </html>

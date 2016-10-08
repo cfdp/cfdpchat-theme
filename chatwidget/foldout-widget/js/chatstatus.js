@@ -47,7 +47,7 @@
       else if (chatStatus === 'undefined' || !chatStatus.chatOpen){
         statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');
         chatButton.hide();
-        console.log('Opeka chat app is not turned on or chatStatus is undefined, chatStatus: ', chatStatus);
+        // console.log('Opeka chat app is not turned on or chatStatus is undefined, chatStatus: ', chatStatus);
       }
       else {
         statusTab.removeClass('chat-busy chat-open').addClass('chat-closed');

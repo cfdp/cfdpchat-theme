@@ -12,8 +12,8 @@ $json = '
 
     "Tue":
     [
-      { "start": "1800", "finish": "2100", "type": "single" },
-      { "start": "1800", "finish": "2100", "type": "group" }
+      { "start": "2300", "finish": "2330", "type": "single" },
+      { "start": "1800", "finish": "2300", "type": "group" }
     ],
 
     "Wed":
@@ -43,11 +43,6 @@ $currentTime = date("H i");
 
 $openChat = false;
 $counterActive = false;
-
-// If theres no opening hours for the current day, exit
-if (!isset($arr[0]->{$currentDay})){
-  exit();
-}
 
 // Loop through the chat sessions of the current day
 for($i = 0; $i < count($arr[0]->{$currentDay}); $i++) {
@@ -88,7 +83,7 @@ for($i = 0; $i < count($arr[0]->{$currentDay}); $i++) {
     <a id="join-pair-chat" class="btn pairchat inline" href="#">Alle r&aring;dgivere er optaget</a>
     <div class="info">
       1-1 chatten er &aring;ben nu.
-      <a class="sec-action" href="http://cyberhus.dk/chat" target="_parent">L&aelig;s mere</a>.
+      <a class="sec-action" href="/chat" target="_parent">L&aelig;s mere</a>.
     </div>
     ';
 
@@ -110,7 +105,7 @@ for($i = 0; $i < count($arr[0]->{$currentDay}); $i++) {
     $counterActive = true;
 
     echo'
-      <a class="sec-action" target="_parent" href="http://cyberhus.dk/chat" target="_parent">L&aelig;s mere om chat</a>.
+      <a class="sec-action" href="http://cyberhus.dk/chat" target="_parent">L&aelig;s mere om chat</a>.
       </div> <!-- .info -->
     ';
   }

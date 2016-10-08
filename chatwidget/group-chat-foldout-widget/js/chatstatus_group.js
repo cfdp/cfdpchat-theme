@@ -20,11 +20,11 @@
         groupButton = $('#join-group-chat');
 
     var copyTextBusy = "<p>Velkommen til Cyberhus-gruppechat.</p><p>Chatten er optaget.</p>";
-    var copyTextClosed = "<p>Velkommen til Cyberhus-gruppechat.</p><p> &Aring;bningstider:</p><ul><li>Tirsdag 18-21</li></ul>";
+    var copyTextClosed = "<p>Velkommen til Cyberhus-gruppechat.</p><p> &Aring;bningstider:</p><ul><li>Tirsdag og torsdag 18-21</li></ul>";
 
     // Updates the actual status text.
     var updateDisplay = function (attributes) {
-      console.log(chatStatus);
+      //console.log(chatStatus);
       // Now check if chat is open and there are any group rooms active
       if (chatStatus.chatOpen && chatStatus.roomsList && chatStatus.roomsList.length && chatStatus.rooms.group.full == 0) {
         statusTab.removeClass('chat-closed chat-busy').addClass('chat-open');
