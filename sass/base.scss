@@ -1,6 +1,6 @@
-/* Sass stylesheet for the CfDP Chat theme. 
+/* Sass stylesheet for the CuraChat theme.
 Based on Bootstrap 2.0
-By benway.dk and cfdp.dk */
+By greenvolcano.dk and cfdp.dk */
 
 $pairChatBodyBgColor: #F8F8F8;
 $groupChatBodyBgColor: #F8F8F8;
@@ -430,4 +430,27 @@ ul.chat-message-list {
     margin: 1px;
     text-indent: 9999px;
   }
+}
+
+/* FOOTER */
+
+/* Branding */
+@media screen and (max-width: 640px) {
+  .logo1 { display: none;}
+  .footer {
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 641px) {
+  .logo1 {
+    display: inline-block;
+    margin-right: 20px;
+    max-width: 200px;
+  }
+  .logo2 {
+    display: inline-block;
+    max-width: 440px;
+  }
+  .footer-branding { float: right; max-width: 72%; }
 }
