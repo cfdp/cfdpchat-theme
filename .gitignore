@@ -10,6 +10,7 @@ sites/all/modules/devel
 sites/all/modules/devel_themer
 sites/all/modules/simplehtmldom
 /node_modules
+npm-debug.log
 
 # Ignore Sass cache files
 .sass-cache
