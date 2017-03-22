@@ -9,6 +9,7 @@ sites/*/private
 sites/all/modules/devel
 sites/all/modules/devel_themer
 sites/all/modules/simplehtmldom
+/node_modules
 
 # Ignore Sass cache files
 .sass-cache
