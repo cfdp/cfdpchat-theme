@@ -166,49 +166,54 @@ li.leaf {
 
 /* ROOM LIST - /OPEKA#ROOMS*/
 /* line 192, ../sass/base.scss */
-.go-to-queues {
+.invite-rooms,
+.go-to-queues,
+.create-invite,
+.create-queue {
   float: right;
+  margin-left: 10px;
 }
 
-/* line 196, ../sass/base.scss */
-#opeka-app .app-view button.create-room {
+/* line 201, ../sass/base.scss */
+#opeka-app .app-view button.create-room, #opeka-app .app-view button.invite-rooms,
+#opeka-app .app-view button .create-invite {
   margin-bottom: 20px;
 }
 
 /* Create room dialogue */
-/* line 201, ../sass/base.scss */
+/* line 209, ../sass/base.scss */
 input.private,
-label[for=private-room] {
+label[for=private] {
   display: inline;
 }
 
 /* The room list */
-/* line 207, ../sass/base.scss */
+/* line 215, ../sass/base.scss */
 ul.room-list {
   list-style: none;
   margin: 20px 0px 0px 0px;
 }
 
-/* line 212, ../sass/base.scss */
+/* line 220, ../sass/base.scss */
 ul.room-list a.admin-enter {
   float: right;
   padding: 10px 0 0 0;
 }
 
-/* line 217, ../sass/base.scss */
+/* line 225, ../sass/base.scss */
 .room {
   clear: both;
   overflow: hidden;
   margin-bottom: 20px;
 }
 
-/* line 223, ../sass/base.scss */
+/* line 231, ../sass/base.scss */
 .room-details {
   padding: 10px;
   width: 70px;
 }
 
-/* line 228, ../sass/base.scss */
+/* line 236, ../sass/base.scss */
 .room-status,
 .room-size {
   color: #ffffff;
@@ -220,13 +225,13 @@ ul.room-list a.admin-enter {
   text-transform: uppercase;
 }
 
-/* line 239, ../sass/base.scss */
+/* line 247, ../sass/base.scss */
 .room-details,
 .room-description {
   float: left;
 }
 
-/* line 244, ../sass/base.scss */
+/* line 252, ../sass/base.scss */
 .room-description {
   display: inline-block;
   font-size: 16px;
@@ -235,7 +240,7 @@ ul.room-list a.admin-enter {
   padding: 10px 5px;
 }
 
-/* line 252, ../sass/base.scss */
+/* line 260, ../sass/base.scss */
 .room-enter,
 .meantime {
   display: inline-block;
@@ -243,7 +248,7 @@ ul.room-list a.admin-enter {
 }
 
 /* The main chat message area */
-/* line 259, ../sass/base.scss */
+/* line 267, ../sass/base.scss */
 ul.chat-message-list {
   background: #ffffff;
   border: 1px solid #cccccc;
@@ -255,12 +260,12 @@ ul.chat-message-list {
   max-width: 640px;
 }
 
-/* line 270, ../sass/base.scss */
+/* line 278, ../sass/base.scss */
 .chat-message-list-wrapper {
   background: transparent;
 }
 
-/* line 274, ../sass/base.scss */
+/* line 282, ../sass/base.scss */
 .chat-message,
 .system-message {
   margin: 0 10px 10px 5px;
@@ -268,75 +273,75 @@ ul.chat-message-list {
 }
 
 /* Common styles for all types */
-/* line 281, ../sass/base.scss */
+/* line 289, ../sass/base.scss */
 .bs-callout {
   padding: 10px;
   border-left: 5px solid #cccccc;
   background: whitesmoke;
 }
-/* line 286, ../sass/base.scss */
+/* line 294, ../sass/base.scss */
 .bs-callout h4 {
   margin-top: 0;
 }
-/* line 290, ../sass/base.scss */
+/* line 298, ../sass/base.scss */
 .bs-callout .sender-name,
 .bs-callout .time {
   color: #999999;
 }
-/* line 295, ../sass/base.scss */
+/* line 303, ../sass/base.scss */
 .bs-callout p:last-child {
   margin-bottom: 0;
 }
-/* line 299, ../sass/base.scss */
+/* line 307, ../sass/base.scss */
 .bs-callout .highlight {
   background-color: #ffffff;
 }
-/* line 303, ../sass/base.scss */
+/* line 311, ../sass/base.scss */
 .bs-callout .btn-danger {
   opacity: .2;
 }
-/* line 307, ../sass/base.scss */
+/* line 315, ../sass/base.scss */
 .bs-callout .top-info {
   margin-bottom: .3em;
 }
-/* line 311, ../sass/base.scss */
+/* line 319, ../sass/base.scss */
 .bs-callout:hover .actions .btn-danger {
   opacity: 1;
 }
 
 /* Variations */
-/* line 318, ../sass/base.scss */
+/* line 326, ../sass/base.scss */
 .bs-callout-counselor {
   border-left: 5px solid #68ba68;
   background-color: #f4faf4;
 }
-/* line 322, ../sass/base.scss */
+/* line 330, ../sass/base.scss */
 .bs-callout-counselor .sender-name, .bs-callout-counselor .time {
   color: #a3d7a3;
 }
 
-/* line 327, ../sass/base.scss */
+/* line 335, ../sass/base.scss */
 .bs-callout-client {
   border-left: 5px solid #589bcd;
   background-color: #f5f9fc;
 }
-/* line 331, ../sass/base.scss */
+/* line 339, ../sass/base.scss */
 .bs-callout-client .sender-name, .bs-callout-client .time {
   color: #91bce0;
 }
 
-/* line 337, ../sass/base.scss */
+/* line 345, ../sass/base.scss */
 .sender-name, .time {
   text-transform: uppercase;
   font-size: 12px;
 }
 
-/* line 342, ../sass/base.scss */
+/* line 350, ../sass/base.scss */
 .system-message {
   color: #999999;
 }
 
-/* line 346, ../sass/base.scss */
+/* line 354, ../sass/base.scss */
 .delete-message.btn-link {
   text-transform: uppercase;
   font-size: 12px;
@@ -345,24 +350,24 @@ ul.chat-message-list {
   opacity: 0.4;
 }
 
-/* line 354, ../sass/base.scss */
+/* line 362, ../sass/base.scss */
 .delete-message.btn-link:hover {
   opacity: 1;
 }
 
-/* line 358, ../sass/base.scss */
+/* line 366, ../sass/base.scss */
 .system-message {
   color: #999999;
   padding-left: 20px;
 }
 
 /* Chat message form */
-/* line 365, ../sass/base.scss */
+/* line 373, ../sass/base.scss */
 .message-form {
   position: relative;
 }
 
-/* line 367, ../sass/base.scss */
+/* line 375, ../sass/base.scss */
 .message-form .form-text {
   height: 60px;
   resize: none;
@@ -370,7 +375,7 @@ ul.chat-message-list {
   width: 100%;
 }
 
-/* line 374, ../sass/base.scss */
+/* line 382, ../sass/base.scss */
 .paused-nowriting {
   background-color: #afafaf;
   border: 1px solid #7e7e7e;
@@ -379,7 +384,7 @@ ul.chat-message-list {
 }
 
 /* FIXED TAB - CHAT WIDGET */
-/* line 381, ../sass/base.scss */
+/* line 389, ../sass/base.scss */
 .fixed-tab.well {
   height: 40px;
   right: -265px;
@@ -391,32 +396,32 @@ ul.chat-message-list {
 }
 
 /* CHAT PRESENTATION PAGE */
-/* line 392, ../sass/base.scss */
+/* line 400, ../sass/base.scss */
 .teaser {
   float: left;
   margin-right: 10px;
   width: 90%;
 }
 
-/* line 398, ../sass/base.scss */
+/* line 406, ../sass/base.scss */
 .teaser-wrapper {
   overflow: hidden;
 }
 
-/* line 402, ../sass/base.scss */
+/* line 410, ../sass/base.scss */
 .teaser-column {
   float: left;
   overflow: hidden;
   max-width: 50%;
 }
 
-/* line 408, ../sass/base.scss */
+/* line 416, ../sass/base.scss */
 .footer {
   border: none;
 }
 
 /* MODAL DIALOG / POPUP WINDOWS */
-/* line 415, ../sass/base.scss */
+/* line 423, ../sass/base.scss */
 .page-opeka .ui-icon,
 .page-opeka .ui-dialog .ui-dialog-titlebar-close,
 .page-admin-opeka .ui-icon,
@@ -425,14 +430,14 @@ ul.chat-message-list {
   background-repeat: no-repeat;
   background-position: -96px -128px;
 }
-/* line 422, ../sass/base.scss */
+/* line 430, ../sass/base.scss */
 .page-opeka .ui-widget-header .ui-icon,
 .page-opeka .ui-dialog .ui-dialog-titlebar-close,
 .page-admin-opeka .ui-widget-header .ui-icon,
 .page-admin-opeka .ui-dialog .ui-dialog-titlebar-close {
   background-image: url(images/ui-icons_222222_256x240.png);
 }
-/* line 428, ../sass/base.scss */
+/* line 436, ../sass/base.scss */
 .page-opeka .ui-dialog .ui-dialog-titlebar-close span,
 .page-admin-opeka .ui-dialog .ui-dialog-titlebar-close span {
   display: block;
@@ -443,32 +448,32 @@ ul.chat-message-list {
 /* FOOTER */
 /* Branding */
 @media screen and (max-width: 640px) {
-  /* line 439, ../sass/base.scss */
+  /* line 447, ../sass/base.scss */
   .logo1 {
     display: none;
   }
 
-  /* line 440, ../sass/base.scss */
+  /* line 448, ../sass/base.scss */
   .footer {
     padding: 0;
     margin: 0;
   }
 }
 @media screen and (min-width: 641px) {
-  /* line 446, ../sass/base.scss */
+  /* line 454, ../sass/base.scss */
   .logo1 {
     display: inline-block;
     margin-right: 20px;
     max-width: 200px;
   }
 
-  /* line 451, ../sass/base.scss */
+  /* line 459, ../sass/base.scss */
   .logo2 {
     display: inline-block;
     max-width: 440px;
   }
 
-  /* line 455, ../sass/base.scss */
+  /* line 463, ../sass/base.scss */
   .footer-branding {
     float: right;
     max-width: 72%;
