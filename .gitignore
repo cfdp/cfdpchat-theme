@@ -10,6 +10,9 @@ sites/all/modules/devel
 sites/all/modules/devel_themer
 sites/all/modules/simplehtmldom
 
-# Ignore Sass cache files
+# Ignore Sass cache and dev files
 .sass-cache
 .ruby-version
+node_modules
+npm-debug.log
+.DS_Store

@@ -29,11 +29,11 @@ $messageHighlight: #ffffff;
 
 
 /* Hidden elements @todo: consider adding them as features to config.json
-or as theme settings
+or as opeka module or cura-chat-theme settings
 Hide page title on opeka pages
 Hide leave room button for counselors
-Hide the close chat button from the chat view
 Hide Navbar in the chatwindow for anonymous users
+Don't show the "user is writing" message for anonymous users
 */
 .room-size-2 .chat-toggle,
 .groupchat .chat-toggle,
@@ -41,6 +41,7 @@ Hide Navbar in the chatwindow for anonymous users
 .page-admin-opeka .page-header,
 .page-opeka .page-header,
 .not-logged-in .online-status-view,
+.not-logged-in .writers-message,
 body[class^="room-size"].not-logged-in #navbar,
 body[class*=" room-size"].not-logged-in #navbar,
 .groupchat.not-logged-in #navbar{
@@ -93,8 +94,6 @@ body {
   .form-text.age {
     max-width: 60px;
   }
-}
-.logged-in .opeka-chat-sidebar {
 }
 
 /* Main menu */
@@ -158,8 +157,10 @@ li.leaf {
   }
 
   /* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
-  .app-view {
+  /* Place the leave room button sensibly */
+  .client-sidebar-0 {
     position: relative;
+    max-width: 640px;
   }
   .app-view form.leave-room-form {
     position: absolute;
