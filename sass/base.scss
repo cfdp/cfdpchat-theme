@@ -190,17 +190,25 @@ li.leaf {
 }
 
 /* ROOM LIST - /OPEKA#ROOMS*/
-.go-to-queues {
+.invite-rooms,
+.go-to-queues,
+.create-invite,
+.create-queue {
   float: right;
+  margin-left: 10px;
 }
 
-#opeka-app .app-view button.create-room {
-  margin-bottom: 20px;  
+#opeka-app .app-view button {
+  &.create-room,
+  &.invite-rooms,
+  .create-invite {
+    margin-bottom: 20px;
+  }
 }
 
 /* Create room dialogue */
 input.private,
-label[for=private-room] {
+label[for=private] {
   display: inline;
 }
 
