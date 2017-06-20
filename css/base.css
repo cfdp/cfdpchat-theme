@@ -1,5 +1,5 @@
 /* Sass stylesheet for the CuraChat theme.
-Based on Bootstrap 2.0
+Based on Bootstrap 3.0
 By greenvolcano.dk and cfdp.dk */
 /* Hidden elements @todo: consider adding them as features to config.json
 or as opeka module or cura-chat-theme settings
@@ -8,7 +8,7 @@ Hide leave room button for counselors
 Hide Navbar in the chatwindow for anonymous users
 Don't show the "user is writing" message for anonymous users
 */
-.room-size-2 .chat-toggle,
+/*.room-size-2 .chat-toggle,
 .groupchat .chat-toggle,
 .logged-in .leave-room-form,
 .page-admin-opeka .page-header,
@@ -17,14 +17,9 @@ Don't show the "user is writing" message for anonymous users
 .not-logged-in .writers-message,
 body[class^="room-size"].not-logged-in #navbar,
 body[class*=" room-size"].not-logged-in #navbar,
-.groupchat.not-logged-in #navbar {
-  display: none; }
-
-body[class^="room-size"].not-logged-in .app-view,
-body[class*=" room-size"].not-logged-in .app-view,
-.groupchat.not-logged-in .app-view {
-  margin-top: 48px; }
-
+.groupchat.not-logged-in #navbar{
+  display: none;
+}*/
 body {
   font-size: 14px;
   font-family: 'Ubuntu', sans-serif; }
@@ -39,18 +34,40 @@ body {
     background-repeat: no-repeat;
     background-position: 20px 5px; }
 
-/* The signin view */
+ul {
+  padding-left: 16px; }
+
+.btn-success {
+  background-color: #27ae61; }
+
+/* The signin view. Logging into the chat. */
 .signin-view {
-  margin-top: 70px;
-  max-width: 400px; }
-
-.form-horizontal .control-label {
-  width: 100px; }
-
-.form-horizontal .controls {
-  margin-left: 120px; }
-  .form-horizontal .controls .form-text.age {
-    max-width: 60px; }
+  max-width: 400px;
+  margin-bottom: 20px; }
+  .signin-view .welcome-message {
+    padding: 15px 0; }
+  .signin-view .form-text.nickname {
+    width: 165px; }
+  .signin-view .form-text.age {
+    width: 45px; }
+  .signin-view .form-select.gender {
+    width: 85px; }
+  .signin-view label,
+  .signin-view button.form-submit {
+    clear: left;
+    float: left; }
+  .signin-view .gender-label {
+    float: left;
+    clear: none; }
+  .signin-view .form-text,
+  .signin-view .form-select {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 10px;
+    vertical-align: middle; }
 
 /* Main menu */
 li.expanded,
@@ -63,48 +80,19 @@ li.leaf {
   margin-right: 0; }
 
 #opeka-app {
-  /* LOGGING INTO THE CHAT - /OPEKA */
   /* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
   /* Place the leave room button sensibly */
   /* The user info and admin sidebar */ }
   #opeka-app .footer {
     margin: 10px 0;
     padding: 10px 0; }
-  #opeka-app .connect-interface {
-    padding: 19px;
-    margin-bottom: 20px;
-    width: 330px; }
-    #opeka-app .connect-interface .form-text.nickname {
-      width: 165px; }
-    #opeka-app .connect-interface .form-text.age {
-      width: 45px; }
-    #opeka-app .connect-interface .form-select.gender {
-      width: 85px; }
-    #opeka-app .connect-interface label,
-    #opeka-app .connect-interface button.form-submit {
-      clear: left;
-      float: left; }
-    #opeka-app .connect-interface .gender-label {
-      float: left;
-      clear: none; }
-    #opeka-app .connect-interface .form-text,
-    #opeka-app .connect-interface .form-select {
-      display: block;
-      width: 100%;
-      float: left;
-      padding: 8px 12px;
-      font-size: 14px;
-      margin: 10px;
-      vertical-align: middle; }
   #opeka-app .client-sidebar-0 {
     position: relative;
     max-width: 640px; }
-  #opeka-app .app-view form.leave-room-form {
-    position: absolute;
-    top: -40px;
-    right: 0px; }
-  #opeka-app .app-view .sidebar {
-    margin: 0 0 0 5px; }
+  #opeka-app .app-view {
+    margin-top: 15px; }
+    #opeka-app .app-view .sidebar {
+      margin: 0 0 0 5px; }
   #opeka-app ul.user-list {
     background: transparent;
     list-style: none;
@@ -116,18 +104,22 @@ li.leaf {
       padding-left: 5px; }
 
 /* ROOM LIST - /OPEKA#ROOMS*/
-.go-to-queues {
-  float: right; }
+.invite-rooms,
+.go-to-queues,
+.create-invite,
+.create-queue {
+  float: right;
+  margin-left: 10px; }
 
-#opeka-app .app-view button.create-room {
+#opeka-app .app-view button.create-room, #opeka-app .app-view button.invite-rooms,
+#opeka-app .app-view button .create-invite {
   margin-bottom: 20px; }
 
 /* Create room dialogue */
 input.private,
-label[for=private-room] {
+label[for=private] {
   display: inline; }
 
-/* The room list */
 ul.room-list {
   list-style: none;
   margin: 20px 0px 0px 0px; }
@@ -171,7 +163,15 @@ ul.room-list a.admin-enter {
   display: inline-block;
   float: right; }
 
-/* The main chat message area */
+/* Queue list */
+ul.queue-list {
+  margin-top: 2em; }
+
+/* Invite list */
+table.invite-list {
+  margin-top: 2em; }
+
+/* Chat room */
 ul.chat-message-list {
   background: #ffffff;
   border: 1px solid #cccccc;

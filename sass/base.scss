@@ -1,9 +1,11 @@
 /* Sass stylesheet for the CuraChat theme.
-Based on Bootstrap 2.0
+Based on Bootstrap 3.0
 By greenvolcano.dk and cfdp.dk */
 
 $pairChatBodyBgColor: #F8F8F8;
 $groupChatBodyBgColor: #F8F8F8;
+$btnBgColor: #34495e;
+$bntSuccessColor: #27ae61;
 $wrapperBgColor: transparent;
 $wrapperBorderColor: #cccccc;
 $contentBgColor: #ffffff;
@@ -35,7 +37,7 @@ Hide leave room button for counselors
 Hide Navbar in the chatwindow for anonymous users
 Don't show the "user is writing" message for anonymous users
 */
-.room-size-2 .chat-toggle,
+/*.room-size-2 .chat-toggle,
 .groupchat .chat-toggle,
 .logged-in .leave-room-form,
 .page-admin-opeka .page-header,
@@ -46,15 +48,7 @@ body[class^="room-size"].not-logged-in #navbar,
 body[class*=" room-size"].not-logged-in #navbar,
 .groupchat.not-logged-in #navbar{
   display: none;
-}
-
-body[class^="room-size"].not-logged-in,
-body[class*=" room-size"].not-logged-in,
-.groupchat.not-logged-in {
-  .app-view {
-    margin-top: 48px;
-  }
-}
+}*/
 
 body {
   //background: $bgImage;
@@ -78,21 +72,54 @@ body {
   }
 }
 
-/* The signin view */
+ul {
+  padding-left: 16px;
+}
+
+.btn-success {
+  background-color: $bntSuccessColor;
+}
+
+/* The signin view. Logging into the chat. */
 .signin-view {
-  margin-top: 70px;
   max-width: 400px;
-}
+  margin-bottom: 20px;
 
-.form-horizontal .control-label {
-  width: 100px;
-}
+  .welcome-message {
+    padding: 15px 0;
+  }
+  .form-text.nickname {
+    width: 165px;
+  }
 
-.form-horizontal .controls {
-  margin-left: 120px;
+ .form-text.age {
+    width: 45px;
+  }
 
-  .form-text.age {
-    max-width: 60px;
+  .form-select.gender {
+    width: 85px;
+  }
+
+  label,
+  button.form-submit {
+    clear: left;
+    float: left;
+  }
+
+  .gender-label {
+    float: left;
+    clear: none;
+  }
+
+  .form-text,
+  .form-select {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 10px;
+    vertical-align: middle;
   }
 }
 
@@ -115,62 +142,20 @@ li.leaf {
     padding: 10px 0;
   }
 
-  /* LOGGING INTO THE CHAT - /OPEKA */
-  .connect-interface {
-    padding: 19px;
-    margin-bottom: 20px;
-    width: 330px;
-
-    .form-text.nickname {
-      width: 165px;
-    }
-
-   .form-text.age {
-      width: 45px;
-    }
-
-    .form-select.gender {
-      width: 85px;
-    }
-
-    label,
-    button.form-submit {
-      clear: left;
-      float: left;
-    }
-
-    .gender-label {
-      float: left;
-      clear: none;
-    }
-
-    .form-text,
-    .form-select {
-      display: block;
-      width: 100%;
-      float: left;
-      padding: 8px 12px;
-      font-size: 14px;
-      margin: 10px;
-      vertical-align: middle;
-    }
-  }
-
   /* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
   /* Place the leave room button sensibly */
   .client-sidebar-0 {
     position: relative;
     max-width: 640px;
   }
-  .app-view form.leave-room-form {
-    position: absolute;
-    top: -40px;
-    right: 0px;
-  }
 
   /* The user info and admin sidebar */
-  .app-view .sidebar {
-    margin: 0 0 0 5px;
+  .app-view {
+    margin-top: 15px;
+    
+    .sidebar {
+      margin: 0 0 0 5px;
+    }
   }
 
   ul.user-list {
@@ -190,21 +175,28 @@ li.leaf {
 }
 
 /* ROOM LIST - /OPEKA#ROOMS*/
-.go-to-queues {
+.invite-rooms,
+.go-to-queues,
+.create-invite,
+.create-queue {
   float: right;
+  margin-left: 10px;
 }
 
-#opeka-app .app-view button.create-room {
-  margin-bottom: 20px;  
+#opeka-app .app-view button {
+  &.create-room,
+  &.invite-rooms,
+  .create-invite {
+    margin-bottom: 20px;
+  }
 }
 
 /* Create room dialogue */
 input.private,
-label[for=private-room] {
+label[for=private] {
   display: inline;
 }
 
-/* The room list */
 ul.room-list {
   list-style: none;
   margin: 20px 0px 0px 0px;
@@ -256,7 +248,18 @@ ul.room-list a.admin-enter {
   float: right;
 }
 
-/* The main chat message area */
+/* Queue list */
+
+ul.queue-list {
+  margin-top: 2em;
+}
+
+/* Invite list */
+table.invite-list {
+  margin-top: 2em;
+}
+
+/* Chat room */
 ul.chat-message-list {
   background: $contentBgColor;
   border: 1px solid $wrapperBorderColor;
