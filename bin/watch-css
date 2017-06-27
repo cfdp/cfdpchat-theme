@@ -1,1 +1,1 @@
-node-sass -w sass/ -o css/
+node-sass -w sass/ -o stylesheets/

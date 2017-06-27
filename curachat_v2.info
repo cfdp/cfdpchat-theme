@@ -24,10 +24,10 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.css
-stylesheets[all][] = css/base.css
-stylesheets[all][] = css/jquery-ui-1.10.0.custom.css
-stylesheets[all][] = css/jquery.ui.1.10.0.ie.css
+stylesheets[all][] = stylesheets/style.css
+stylesheets[all][] = stylesheets/base.css
+stylesheets[all][] = stylesheets/jquery-ui-1.10.0.custom.css
+stylesheets[all][] = stylesheets/jquery.ui.1.10.0.ie.css
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts

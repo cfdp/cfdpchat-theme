@@ -2,32 +2,7 @@
 Based on Bootstrap 3.0
 By greenvolcano.dk and cfdp.dk */
 
-$pairChatBodyBgColor: #F8F8F8;
-$groupChatBodyBgColor: #F8F8F8;
-$btnBgColor: #34495e;
-$bntSuccessColor: #27ae61;
-$wrapperBgColor: transparent;
-$wrapperBorderColor: #cccccc;
-$contentBgColor: #ffffff;
-$borderRadius: 4px;
-$bgImage: url("images/repeat_main.png");
-$bgImagePair: url("images/bg_img_pair.png");
-$bgImageGroup: url("images/bg_img_group.png");
-// Room list colors
-$roomInfoColor: #ffffff;
-// Message callout colors
-$messageBgColor: whitesmoke;
-$messageCounselorBgColor: #f4faf4;
-$messageClientBgColor: #f5f9fc;
-// Message callout border left colors
-$messageBorderLeftColor: #cccccc;
-$messageCounselorBLColor: darken( $messageCounselorBgColor, 40% );
-$messageClientBLColor: darken( $messageClientBgColor, 40% );
-// Message callout meta data (time etc) color
-$messageMetaDataColor: #999999;
-$messageCounselorMDColor: #a3d7a3;
-$messageClientMDColor: #91bce0;
-$messageHighlight: #ffffff;
+@import "default-variables";
 
 
 /* Hidden elements @todo: consider adding them as features to config.json
@@ -78,6 +53,10 @@ ul {
 
 .btn-success {
   background-color: $bntSuccessColor;
+}
+
+.messages {
+  margin: 1em 0;
 }
 
 /* The signin view. Logging into the chat. */
@@ -191,6 +170,10 @@ li.leaf {
   }
 }
 
+.chat-toggle-container {
+  margin-bottom: 20px;
+}
+
 /* Create room dialogue */
 input.private,
 label[for=private] {
@@ -200,6 +183,7 @@ label[for=private] {
 ul.room-list {
   list-style: none;
   margin: 20px 0px 0px 0px;
+  padding-left: 0;
 }
 
 ul.room-list a.admin-enter {
@@ -379,6 +363,12 @@ ul.chat-message-list {
   background-color: rgb(175,175,175); 
   border: 1px solid rgb(126,126,126); 
   border-radius: 4px; padding: 10px;
+}
+
+.chat-flow-controls {
+  label {
+    font-weight: normal;
+  }
 }
 
 /* FIXED TAB - CHAT WIDGET */

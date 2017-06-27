@@ -12,3 +12,42 @@
 
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+$pairChatBodyBgColor: #F8F8F8;
+$groupChatBodyBgColor: #F8F8F8;
+$btnBgColor: #34495e;
+$bntSuccessColor: #27ae61;
+$wrapperBgColor: transparent;
+$wrapperBorderColor: #cccccc;
+$contentBgColor: #ffffff;
+$borderRadius: 4px;
+$bgImage: url("images/repeat_main.png");
+$bgImagePair: url("images/bg_img_pair.png");
+$bgImageGroup: url("images/bg_img_group.png");
+// Room list colors
+$roomInfoColor: #ffffff;
+// Message callout colors
+$messageBgColor: whitesmoke;
+$messageCounselorBgColor: #f4faf4;
+$messageClientBgColor: #f5f9fc;
+// Message callout border left colors
+$messageBorderLeftColor: #cccccc;
+$messageCounselorBLColor: darken( $messageCounselorBgColor, 40% );
+$messageClientBLColor: darken( $messageClientBgColor, 40% );
+// Message callout meta data (time etc) color
+$messageMetaDataColor: #999999;
+$messageCounselorMDColor: #a3d7a3;
+$messageClientMDColor: #91bce0;
+$messageHighlight: #ffffff;
+
+/* Bootstrap overrides */
+$brand-success: $bntSuccessColor;
+
+$btn-success-color:              #fff;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             darken($btn-success-bg, 5%);
+
+//$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+//$brand-info:            #5bc0de !default;
+//$brand-warning:         #f0ad4e !default;
+//$brand-danger:          #d9534f !default;
