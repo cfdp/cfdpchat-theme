@@ -115,6 +115,7 @@ li.leaf {
 }
 
 #opeka-app {
+  margin-top: 50px;
 
   .footer {
     margin: 10px 0;
@@ -126,6 +127,12 @@ li.leaf {
   .client-sidebar-0 {
     position: relative;
     max-width: 640px;
+  }
+
+  form.leave-room-form {
+    position: absolute;
+    top: -40px;
+    right: 0px;
   }
 
   /* The user info and admin sidebar */
