@@ -82,6 +82,13 @@ body {
 .signin-view {
   margin-top: 70px;
   max-width: 400px;
+  
+  .leave-link {
+    margin: 10px 0;
+  }
+  @media (max-width: 480px) {
+    margin-top: 20px;
+  }
 }
 
 .form-horizontal .control-label {
@@ -90,9 +97,12 @@ body {
 
 .form-horizontal .controls {
   margin-left: 120px;
-
   .form-text.age {
     max-width: 60px;
+  }
+
+  @media (max-width: 480px) {
+    margin-left: 0;
   }
 }
 
