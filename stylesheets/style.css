@@ -10,6 +10,7 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
+/* Responsive media query breakpoints */
 /* Bootstrap overrides */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -8926,48 +8927,49 @@ body #admin-menu .dropdown li {
 /* line 121, ../sass/_overrides.scss */
 .navbar.container, .navbar.container-fluid {
   margin-top: 20px;
+  margin-bottom: 5px;
 }
-/* line 125, ../sass/_overrides.scss */
+/* line 127, ../sass/_overrides.scss */
 .navbar.container > .container, .navbar.container-fluid > .container-fluid {
   margin: 0;
   padding: 0;
   width: auto;
 }
 
-/* line 134, ../sass/_overrides.scss */
+/* line 136, ../sass/_overrides.scss */
 #overlay-container,
 .overlay-modal-background,
 .overlay-element {
   z-index: 1500;
 }
 
-/* line 139, ../sass/_overrides.scss */
+/* line 141, ../sass/_overrides.scss */
 #toolbar {
   z-index: 1600;
 }
 
-/* line 143, ../sass/_overrides.scss */
+/* line 145, ../sass/_overrides.scss */
 .modal {
   z-index: 1620;
 }
 
-/* line 146, ../sass/_overrides.scss */
+/* line 148, ../sass/_overrides.scss */
 .modal-dialog {
   z-index: 1630;
 }
 
-/* line 149, ../sass/_overrides.scss */
+/* line 151, ../sass/_overrides.scss */
 .ctools-modal-dialog .modal-body {
   width: 100% !important;
   overflow: auto;
 }
 
-/* line 153, ../sass/_overrides.scss */
+/* line 155, ../sass/_overrides.scss */
 .modal-backdrop {
   z-index: 1610;
 }
 
-/* line 156, ../sass/_overrides.scss */
+/* line 158, ../sass/_overrides.scss */
 .footer {
   margin-top: 45px;
   padding-top: 35px;
@@ -8975,236 +8977,236 @@ body #admin-menu .dropdown li {
   border-top: 1px solid #E5E5E5;
 }
 
-/* line 164, ../sass/_overrides.scss */
+/* line 166, ../sass/_overrides.scss */
 .element-invisible {
   margin: 0;
   padding: 0;
   width: 1px;
 }
 
-/* line 171, ../sass/_overrides.scss */
+/* line 173, ../sass/_overrides.scss */
 .navbar .logo {
   margin-right: -15px;
   padding-left: 15px;
   padding-right: 15px;
 }
 @media screen and (min-width: 768px) {
-  /* line 171, ../sass/_overrides.scss */
+  /* line 173, ../sass/_overrides.scss */
   .navbar .logo {
     margin-right: 0;
     padding-left: 0;
   }
 }
 
-/* line 182, ../sass/_overrides.scss */
+/* line 184, ../sass/_overrides.scss */
 ul.secondary {
   float: left;
 }
 @media screen and (min-width: 768px) {
-  /* line 182, ../sass/_overrides.scss */
+  /* line 184, ../sass/_overrides.scss */
   ul.secondary {
     float: right;
   }
 }
 
-/* line 190, ../sass/_overrides.scss */
+/* line 192, ../sass/_overrides.scss */
 .page-header {
   margin-top: 0;
 }
 
-/* line 197, ../sass/_overrides.scss */
+/* line 199, ../sass/_overrides.scss */
 .region-sidebar-first .block:first-child h2.block-title,
 .region-sidebar-second .block:first-child h2.block-title {
   margin-top: 0;
 }
 
-/* line 203, ../sass/_overrides.scss */
+/* line 205, ../sass/_overrides.scss */
 p:last-child {
   margin-bottom: 0;
 }
 
-/* line 209, ../sass/_overrides.scss */
+/* line 211, ../sass/_overrides.scss */
 .region-help > .glyphicon {
   font-size: 18px;
   float: left;
   margin: -0.05em 0.5em 0 0;
 }
-/* line 214, ../sass/_overrides.scss */
+/* line 216, ../sass/_overrides.scss */
 .region-help .block {
   overflow: hidden;
 }
 
-/* line 220, ../sass/_overrides.scss */
+/* line 222, ../sass/_overrides.scss */
 form#search-block-form {
   margin: 0;
 }
 
-/* line 223, ../sass/_overrides.scss */
+/* line 225, ../sass/_overrides.scss */
 .navbar #block-search-form {
   float: none;
   margin: 5px 0 5px 5px;
 }
 @media screen and (min-width: 992px) {
-  /* line 223, ../sass/_overrides.scss */
+  /* line 225, ../sass/_overrides.scss */
   .navbar #block-search-form {
     float: right;
   }
 }
-/* line 230, ../sass/_overrides.scss */
+/* line 232, ../sass/_overrides.scss */
 .navbar #block-search-form .input-group-btn {
   width: auto;
 }
 
-/* line 234, ../sass/_overrides.scss */
+/* line 236, ../sass/_overrides.scss */
 .navbar-search .control-group {
   margin-bottom: 0px;
 }
 
-/* line 239, ../sass/_overrides.scss */
+/* line 241, ../sass/_overrides.scss */
 ul.action-links {
   margin: 12px 0;
   padding: 0;
 }
-/* line 242, ../sass/_overrides.scss */
+/* line 244, ../sass/_overrides.scss */
 ul.action-links li {
   display: inline;
   margin: 0;
   padding: 0 6px 0 0;
 }
-/* line 247, ../sass/_overrides.scss */
+/* line 249, ../sass/_overrides.scss */
 ul.action-links .glyphicon {
   padding-right: 0.5em;
 }
 
-/* line 253, ../sass/_overrides.scss */
+/* line 255, ../sass/_overrides.scss */
 input, textarea, select, .uneditable-input {
   max-width: 100%;
   width: auto;
 }
 
-/* line 257, ../sass/_overrides.scss */
+/* line 259, ../sass/_overrides.scss */
 input.error {
   color: #a94442;
   border-color: #ebccd1;
 }
 
-/* line 261, ../sass/_overrides.scss */
+/* line 263, ../sass/_overrides.scss */
 fieldset legend.panel-heading {
   float: left;
   line-height: 1em;
   margin: 0;
 }
 
-/* line 266, ../sass/_overrides.scss */
+/* line 268, ../sass/_overrides.scss */
 fieldset .panel-body {
   clear: both;
   display: inherit;
 }
 
-/* line 270, ../sass/_overrides.scss */
+/* line 272, ../sass/_overrides.scss */
 fieldset .panel-heading a.panel-title {
   color: inherit;
   display: block;
   margin: -10px -15px;
   padding: 10px 15px;
 }
-/* line 275, ../sass/_overrides.scss */
+/* line 277, ../sass/_overrides.scss */
 fieldset .panel-heading a.panel-title:hover {
   text-decoration: none;
 }
 
-/* line 279, ../sass/_overrides.scss */
+/* line 281, ../sass/_overrides.scss */
 .form-group:last-child,
 .panel:last-child {
   margin-bottom: 0;
 }
 
-/* line 283, ../sass/_overrides.scss */
+/* line 285, ../sass/_overrides.scss */
 .form-horizontal .form-group {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 287, ../sass/_overrides.scss */
+/* line 289, ../sass/_overrides.scss */
 .form-actions {
   clear: both;
 }
 
-/* line 291, ../sass/_overrides.scss */
+/* line 293, ../sass/_overrides.scss */
 .managed-files.table td:first-child {
   width: 100%;
 }
 
-/* line 295, ../sass/_overrides.scss */
+/* line 297, ../sass/_overrides.scss */
 div.image-widget-data {
   float: none;
   overflow: hidden;
 }
 
-/* line 299, ../sass/_overrides.scss */
+/* line 301, ../sass/_overrides.scss */
 table.sticky-header {
   z-index: 1;
 }
 
-/* line 302, ../sass/_overrides.scss */
+/* line 304, ../sass/_overrides.scss */
 .resizable-textarea textarea {
   border-radius: 4px 4px 0 0;
 }
 
-/* line 305, ../sass/_overrides.scss */
+/* line 307, ../sass/_overrides.scss */
 .text-format-wrapper {
   margin-bottom: 15px;
 }
-/* line 308, ../sass/_overrides.scss */
+/* line 310, ../sass/_overrides.scss */
 .text-format-wrapper > .form-type-textarea,
 .text-format-wrapper .filter-wrapper {
   margin-bottom: 0;
 }
 
-/* line 313, ../sass/_overrides.scss */
+/* line 315, ../sass/_overrides.scss */
 .filter-wrapper {
   border-radius: 0 0 4px 4px;
 }
-/* line 315, ../sass/_overrides.scss */
+/* line 317, ../sass/_overrides.scss */
 .filter-wrapper .panel-body {
   padding: 7px;
 }
-/* line 318, ../sass/_overrides.scss */
+/* line 320, ../sass/_overrides.scss */
 .filter-wrapper .form-type-select {
   min-width: 30%;
 }
-/* line 320, ../sass/_overrides.scss */
+/* line 322, ../sass/_overrides.scss */
 .filter-wrapper .form-type-select .filter-list {
   width: 100%;
 }
 
-/* line 325, ../sass/_overrides.scss */
+/* line 327, ../sass/_overrides.scss */
 .filter-help {
   margin-top: 5px;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 325, ../sass/_overrides.scss */
+  /* line 327, ../sass/_overrides.scss */
   .filter-help {
     float: right;
   }
 }
-/* line 331, ../sass/_overrides.scss */
+/* line 333, ../sass/_overrides.scss */
 .filter-help .glyphicon {
   margin: 0 5px 0 0;
   vertical-align: text-top;
 }
 
-/* line 337, ../sass/_overrides.scss */
+/* line 339, ../sass/_overrides.scss */
 .radio:first-child, .checkbox:first-child {
   margin-top: 0;
 }
-/* line 340, ../sass/_overrides.scss */
+/* line 342, ../sass/_overrides.scss */
 .radio:last-child, .checkbox:last-child {
   margin-bottom: 0;
 }
 
-/* line 344, ../sass/_overrides.scss */
+/* line 346, ../sass/_overrides.scss */
 .help-block, .control-group .help-inline {
   color: #777777;
   font-size: 12px;
@@ -9212,42 +9214,42 @@ table.sticky-header {
   padding: 0;
 }
 
-/* line 350, ../sass/_overrides.scss */
+/* line 352, ../sass/_overrides.scss */
 .panel-heading {
   display: block;
 }
 
-/* line 353, ../sass/_overrides.scss */
+/* line 355, ../sass/_overrides.scss */
 a.tabledrag-handle .handle {
   height: auto;
   width: auto;
 }
 
-/* line 359, ../sass/_overrides.scss */
+/* line 361, ../sass/_overrides.scss */
 .error {
   color: #a94442;
 }
 
-/* line 362, ../sass/_overrides.scss */
+/* line 364, ../sass/_overrides.scss */
 div.error,
 table tr.error {
   background-color: #f2dede;
   color: #a94442;
 }
 
-/* line 367, ../sass/_overrides.scss */
+/* line 369, ../sass/_overrides.scss */
 .form-group.error,
 .form-group.has-error {
   background: none;
 }
-/* line 370, ../sass/_overrides.scss */
+/* line 372, ../sass/_overrides.scss */
 .form-group.error label, .form-group.error .control-label,
 .form-group.has-error label,
 .form-group.has-error .control-label {
   color: #a94442;
   font-weight: 600;
 }
-/* line 374, ../sass/_overrides.scss */
+/* line 376, ../sass/_overrides.scss */
 .form-group.error input, .form-group.error textarea, .form-group.error select, .form-group.error .uneditable-input,
 .form-group.has-error input,
 .form-group.has-error textarea,
@@ -9255,19 +9257,19 @@ table tr.error {
 .form-group.has-error .uneditable-input {
   color: #555555;
 }
-/* line 377, ../sass/_overrides.scss */
+/* line 379, ../sass/_overrides.scss */
 .form-group.error .help-block, .form-group.error .help-inline,
 .form-group.has-error .help-block,
 .form-group.has-error .help-inline {
   color: #777777;
 }
 
-/* line 383, ../sass/_overrides.scss */
+/* line 385, ../sass/_overrides.scss */
 .nav-tabs {
   margin-bottom: 10px;
 }
 
-/* line 386, ../sass/_overrides.scss */
+/* line 388, ../sass/_overrides.scss */
 ul li.collapsed,
 ul li.expanded,
 ul li.leaf {
@@ -9275,12 +9277,12 @@ ul li.leaf {
   list-style-image: none;
 }
 
-/* line 392, ../sass/_overrides.scss */
+/* line 394, ../sass/_overrides.scss */
 .tabs--secondary {
   margin: 0 0 10px;
 }
 
-/* line 397, ../sass/_overrides.scss */
+/* line 399, ../sass/_overrides.scss */
 .submitted {
   margin-bottom: 1em;
   font-style: italic;
@@ -9288,24 +9290,24 @@ ul li.leaf {
   color: #777;
 }
 
-/* line 405, ../sass/_overrides.scss */
+/* line 407, ../sass/_overrides.scss */
 .form-type-password-confirm {
   position: relative;
 }
-/* line 407, ../sass/_overrides.scss */
+/* line 409, ../sass/_overrides.scss */
 .form-type-password-confirm label {
   display: block;
 }
-/* line 409, ../sass/_overrides.scss */
+/* line 411, ../sass/_overrides.scss */
 .form-type-password-confirm label .label {
   float: right;
 }
-/* line 413, ../sass/_overrides.scss */
+/* line 415, ../sass/_overrides.scss */
 .form-type-password-confirm .password-help {
   padding-left: 2em;
 }
 @media (min-width: 768px) {
-  /* line 413, ../sass/_overrides.scss */
+  /* line 415, ../sass/_overrides.scss */
   .form-type-password-confirm .password-help {
     border-left: 1px solid #ddd;
     left: 50%;
@@ -9314,12 +9316,12 @@ ul li.leaf {
   }
 }
 @media (min-width: 992px) {
-  /* line 413, ../sass/_overrides.scss */
+  /* line 415, ../sass/_overrides.scss */
   .form-type-password-confirm .password-help {
     left: 33.33333%;
   }
 }
-/* line 425, ../sass/_overrides.scss */
+/* line 427, ../sass/_overrides.scss */
 .form-type-password-confirm .progress {
   background: transparent;
   -moz-border-radius: 0 0 5px 5px;
@@ -9331,39 +9333,39 @@ ul li.leaf {
   height: 4px;
   margin: -5px 0px 0;
 }
-/* line 434, ../sass/_overrides.scss */
+/* line 436, ../sass/_overrides.scss */
 .form-type-password-confirm .form-type-password {
   clear: left;
 }
-/* line 437, ../sass/_overrides.scss */
+/* line 439, ../sass/_overrides.scss */
 .form-type-password-confirm .form-control-feedback {
   right: 15px;
 }
-/* line 440, ../sass/_overrides.scss */
+/* line 442, ../sass/_overrides.scss */
 .form-type-password-confirm .help-block {
   clear: both;
 }
 
-/* line 447, ../sass/_overrides.scss */
+/* line 449, ../sass/_overrides.scss */
 ul.pagination li > a.progress-disabled {
   float: left;
 }
 
-/* line 454, ../sass/_overrides.scss */
+/* line 456, ../sass/_overrides.scss */
 .form-autocomplete .glyphicon {
   color: #777777;
   font-size: 120%;
 }
-/* line 457, ../sass/_overrides.scss */
+/* line 459, ../sass/_overrides.scss */
 .form-autocomplete .glyphicon.glyphicon-spin {
   color: #337ab7;
 }
-/* line 461, ../sass/_overrides.scss */
+/* line 463, ../sass/_overrides.scss */
 .form-autocomplete .input-group-addon {
   background-color: white;
 }
 
-/* line 467, ../sass/_overrides.scss */
+/* line 469, ../sass/_overrides.scss */
 .ajax-progress-bar {
   border-radius: 0 0 4px 4px;
   border: 1px solid #ccc;
@@ -9371,12 +9373,12 @@ ul.pagination li > a.progress-disabled {
   padding: 6px 12px;
   width: 100%;
 }
-/* line 473, ../sass/_overrides.scss */
+/* line 475, ../sass/_overrides.scss */
 .ajax-progress-bar .progress {
   height: 8px;
   margin: 0;
 }
-/* line 477, ../sass/_overrides.scss */
+/* line 479, ../sass/_overrides.scss */
 .ajax-progress-bar .percentage,
 .ajax-progress-bar .message {
   color: #777777;
@@ -9386,7 +9388,7 @@ ul.pagination li > a.progress-disabled {
   padding: 0;
 }
 
-/* line 487, ../sass/_overrides.scss */
+/* line 489, ../sass/_overrides.scss */
 .glyphicon-spin {
   display: inline-block;
   -moz-animation: spin 1s infinite linear;
@@ -9395,7 +9397,7 @@ ul.pagination li > a.progress-disabled {
   animation: spin 1s infinite linear;
 }
 
-/* line 494, ../sass/_overrides.scss */
+/* line 496, ../sass/_overrides.scss */
 a .glyphicon-spin {
   display: inline-block;
   text-decoration: none;
@@ -9446,84 +9448,84 @@ a .glyphicon-spin {
  * @see http://stackoverflow.com/questions/18432577/stacked-tabs-in-bootstrap-3
  * @see http://bootply.com/74926
  */
-/* line 544, ../sass/_overrides.scss */
+/* line 546, ../sass/_overrides.scss */
 .tabbable {
   margin-bottom: 20px;
 }
 
-/* line 548, ../sass/_overrides.scss */
+/* line 550, ../sass/_overrides.scss */
 .tabs-below > .nav-tabs, .tabs-left > .nav-tabs, .tabs-right > .nav-tabs {
   border-bottom: 0;
 }
-/* line 550, ../sass/_overrides.scss */
+/* line 552, ../sass/_overrides.scss */
 .tabs-below > .nav-tabs .summary, .tabs-left > .nav-tabs .summary, .tabs-right > .nav-tabs .summary {
   color: #777777;
   font-size: 12px;
 }
 
-/* line 556, ../sass/_overrides.scss */
+/* line 558, ../sass/_overrides.scss */
 .tab-pane > .panel-heading {
   display: none;
 }
 
-/* line 559, ../sass/_overrides.scss */
+/* line 561, ../sass/_overrides.scss */
 .tab-content > .active {
   display: block;
 }
 
-/* line 565, ../sass/_overrides.scss */
+/* line 567, ../sass/_overrides.scss */
 .tabs-below > .nav-tabs {
   border-top: 1px solid #ddd;
 }
-/* line 567, ../sass/_overrides.scss */
+/* line 569, ../sass/_overrides.scss */
 .tabs-below > .nav-tabs > li {
   margin-top: -1px;
   margin-bottom: 0;
 }
-/* line 570, ../sass/_overrides.scss */
+/* line 572, ../sass/_overrides.scss */
 .tabs-below > .nav-tabs > li > a {
   border-radius: 0 0 4px 4px;
 }
-/* line 572, ../sass/_overrides.scss */
+/* line 574, ../sass/_overrides.scss */
 .tabs-below > .nav-tabs > li > a:hover, .tabs-below > .nav-tabs > li > a:focus {
   border-top-color: #ddd;
   border-bottom-color: transparent;
 }
-/* line 580, ../sass/_overrides.scss */
+/* line 582, ../sass/_overrides.scss */
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
   border-color: transparent #ddd #ddd #ddd;
 }
 
-/* line 592, ../sass/_overrides.scss */
+/* line 594, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs,
 .tabs-right > .nav-tabs {
   padding-bottom: 20px;
   width: 220px;
 }
-/* line 595, ../sass/_overrides.scss */
+/* line 597, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs > li,
 .tabs-right > .nav-tabs > li {
   float: none;
 }
-/* line 597, ../sass/_overrides.scss */
+/* line 599, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs > li:focus,
 .tabs-right > .nav-tabs > li:focus {
   outline: 0;
 }
-/* line 600, ../sass/_overrides.scss */
+/* line 602, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs > li > a,
 .tabs-right > .nav-tabs > li > a {
   margin-right: 0;
   margin-bottom: 3px;
 }
-/* line 603, ../sass/_overrides.scss */
+/* line 605, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs > li > a:focus,
 .tabs-right > .nav-tabs > li > a:focus {
   outline: 0;
 }
-/* line 609, ../sass/_overrides.scss */
+/* line 611, ../sass/_overrides.scss */
 .tabs-left > .tab-content,
 .tabs-right > .tab-content {
   border-radius: 0 4px 4px 4px;
@@ -9535,20 +9537,20 @@ a .glyphicon-spin {
   padding: 10px 15px;
 }
 
-/* line 620, ../sass/_overrides.scss */
+/* line 622, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: -1px;
 }
-/* line 623, ../sass/_overrides.scss */
+/* line 625, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs > li > a {
   border-radius: 4px 0 0 4px;
 }
-/* line 625, ../sass/_overrides.scss */
+/* line 627, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs > li > a:hover, .tabs-left > .nav-tabs > li > a:focus {
   border-color: #eeeeee #ddd #eeeeee #eeeeee;
 }
-/* line 630, ../sass/_overrides.scss */
+/* line 632, ../sass/_overrides.scss */
 .tabs-left > .nav-tabs > .active > a,
 .tabs-left > .nav-tabs > .active > a:hover,
 .tabs-left > .nav-tabs > .active > a:focus {
@@ -9558,30 +9560,30 @@ a .glyphicon-spin {
   box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-/* line 641, ../sass/_overrides.scss */
+/* line 643, ../sass/_overrides.scss */
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: -1px;
 }
-/* line 644, ../sass/_overrides.scss */
+/* line 646, ../sass/_overrides.scss */
 .tabs-right > .nav-tabs > li > a {
   border-radius: 0 4px 4px 0;
 }
-/* line 646, ../sass/_overrides.scss */
+/* line 648, ../sass/_overrides.scss */
 .tabs-right > .nav-tabs > li > a:hover, .tabs-right > .nav-tabs > li > a:focus {
   border-color: #eeeeee #eeeeee #eeeeee #ddd;
   -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
-/* line 652, ../sass/_overrides.scss */
+/* line 654, ../sass/_overrides.scss */
 .tabs-right > .nav-tabs > .active > a,
 .tabs-right > .nav-tabs > .active > a:hover,
 .tabs-right > .nav-tabs > .active > a:focus {
   border-color: #ddd #ddd #ddd transparent;
 }
 
-/* line 661, ../sass/_overrides.scss */
+/* line 663, ../sass/_overrides.scss */
 th.checkbox,
 td.checkbox,
 th.radio,
@@ -9589,29 +9591,29 @@ td.radio {
   display: table-cell;
 }
 
-/* line 670, ../sass/_overrides.scss */
+/* line 672, ../sass/_overrides.scss */
 .views-display-settings .label {
   font-size: 100%;
   color: #666666;
 }
-/* line 674, ../sass/_overrides.scss */
+/* line 676, ../sass/_overrides.scss */
 .views-display-settings .footer {
   padding: 0;
   margin: 4px 0 0 0;
 }
 
-/* line 679, ../sass/_overrides.scss */
+/* line 681, ../sass/_overrides.scss */
 .views-exposed-form .views-exposed-widget .btn {
   margin-top: 1.8em;
 }
 
-/* line 685, ../sass/_overrides.scss */
+/* line 687, ../sass/_overrides.scss */
 table .radio input[type="radio"],
 table .checkbox input[type="checkbox"] {
   max-width: inherit;
 }
 
-/* line 692, ../sass/_overrides.scss */
+/* line 694, ../sass/_overrides.scss */
 .form-horizontal .form-group label {
   position: relative;
   min-height: 1px;
@@ -9623,50 +9625,50 @@ table .checkbox input[type="checkbox"] {
   text-align: right;
 }
 @media (min-width: 768px) {
-  /* line 692, ../sass/_overrides.scss */
+  /* line 694, ../sass/_overrides.scss */
   .form-horizontal .form-group label {
     float: left;
     width: 16.66667%;
   }
 }
 
-/* line 709, ../sass/_overrides.scss */
+/* line 711, ../sass/_overrides.scss */
 .alert a {
   font-weight: bold;
 }
 
-/* line 713, ../sass/_overrides.scss */
+/* line 715, ../sass/_overrides.scss */
 .alert-success a, .alert-success a:hover, .alert-success a:focus {
   color: #2b542c;
 }
 
-/* line 718, ../sass/_overrides.scss */
+/* line 720, ../sass/_overrides.scss */
 .alert-info a, .alert-info a:hover, .alert-info a:focus {
   color: #245269;
 }
 
-/* line 723, ../sass/_overrides.scss */
+/* line 725, ../sass/_overrides.scss */
 .alert-warning a, .alert-warning a:hover, .alert-warning a:focus {
   color: #66512c;
 }
 
-/* line 728, ../sass/_overrides.scss */
+/* line 730, ../sass/_overrides.scss */
 .alert-danger a, .alert-danger a:hover, .alert-danger a:focus {
   color: #843534;
 }
 
-/* line 734, ../sass/_overrides.scss */
+/* line 736, ../sass/_overrides.scss */
 div.image-style-new,
 div.image-style-new div {
   display: block;
 }
 
-/* line 738, ../sass/_overrides.scss */
+/* line 740, ../sass/_overrides.scss */
 div.image-style-new div.input-group {
   display: table;
 }
 
-/* line 742, ../sass/_overrides.scss */
+/* line 744, ../sass/_overrides.scss */
 td.module,
 .table-striped > tbody > tr:nth-child(odd) > td.module,
 .table > tbody > tr > td.module {
@@ -9674,19 +9676,19 @@ td.module,
   font-weight: 700;
 }
 
-/* line 750, ../sass/_overrides.scss */
+/* line 752, ../sass/_overrides.scss */
 .book-toc > .dropdown-menu {
   overflow: hidden;
 }
-/* line 752, ../sass/_overrides.scss */
+/* line 754, ../sass/_overrides.scss */
 .book-toc > .dropdown-menu > .dropdown-header {
   white-space: nowrap;
 }
-/* line 755, ../sass/_overrides.scss */
+/* line 757, ../sass/_overrides.scss */
 .book-toc > .dropdown-menu > li:nth-child(1) > a {
   font-weight: bold;
 }
-/* line 758, ../sass/_overrides.scss */
+/* line 760, ../sass/_overrides.scss */
 .book-toc > .dropdown-menu .dropdown-menu {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -9699,52 +9701,52 @@ td.module,
   position: static;
   width: 100%;
 }
-/* line 767, ../sass/_overrides.scss */
+/* line 769, ../sass/_overrides.scss */
 .book-toc > .dropdown-menu .dropdown-menu > li {
   padding-left: 20px;
 }
-/* line 769, ../sass/_overrides.scss */
+/* line 771, ../sass/_overrides.scss */
 .book-toc > .dropdown-menu .dropdown-menu > li > a {
   margin-left: -40px;
   padding-left: 60px;
 }
 
-/* line 778, ../sass/_overrides.scss */
+/* line 780, ../sass/_overrides.scss */
 #features-filter .form-item.form-type-checkbox {
   padding-left: 20px;
 }
 
-/* line 781, ../sass/_overrides.scss */
+/* line 783, ../sass/_overrides.scss */
 fieldset.features-export-component {
   font-size: 12px;
 }
-/* line 783, ../sass/_overrides.scss */
+/* line 785, ../sass/_overrides.scss */
 html.js #features-export-form fieldset.features-export-component, fieldset.features-export-component {
   margin: 0 0 10px;
 }
-/* line 786, ../sass/_overrides.scss */
+/* line 788, ../sass/_overrides.scss */
 fieldset.features-export-component .panel-heading {
   padding: 5px 10px;
 }
-/* line 788, ../sass/_overrides.scss */
+/* line 790, ../sass/_overrides.scss */
 fieldset.features-export-component .panel-heading a.panel-title {
   font-size: 12px;
   font-weight: 500;
   margin: -5px -10px;
   padding: 5px 10px;
 }
-/* line 795, ../sass/_overrides.scss */
+/* line 797, ../sass/_overrides.scss */
 fieldset.features-export-component .panel-body {
   padding: 0 10px;
 }
 
-/* line 799, ../sass/_overrides.scss */
+/* line 801, ../sass/_overrides.scss */
 div.features-export-list {
   margin: -11px 0 10px;
   padding: 0 10px;
 }
 
-/* line 806, ../sass/_overrides.scss */
+/* line 808, ../sass/_overrides.scss */
 fieldset.features-export-component .component-select .form-type-checkbox,
 div.features-export-list .form-type-checkbox {
   line-height: 1em;
@@ -9752,57 +9754,57 @@ div.features-export-list .form-type-checkbox {
   min-height: 0;
   padding: 3px 3px 3px 25px !important;
 }
-/* line 811, ../sass/_overrides.scss */
+/* line 813, ../sass/_overrides.scss */
 fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox],
 div.features-export-list .form-type-checkbox input[type=checkbox] {
   margin-top: 0;
 }
 
-/* line 818, ../sass/_overrides.scss */
+/* line 820, ../sass/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top {
   top: 79px;
 }
 
-/* line 821, ../sass/_overrides.scss */
+/* line 823, ../sass/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top {
   top: 39px;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  /* line 826, ../sass/_overrides.scss */
+  /* line 828, ../sass/_overrides.scss */
   body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open .navbar-fixed-top {
     left: 240px;
     left: 24rem;
   }
 }
-/* line 831, ../sass/_overrides.scss */
+/* line 833, ../sass/_overrides.scss */
 .navbar-administration #navbar-administration.navbar-oriented .navbar-bar {
   z-index: 1032;
 }
 
-/* line 834, ../sass/_overrides.scss */
+/* line 836, ../sass/_overrides.scss */
 .navbar-administration #navbar-administration .navbar-tray {
   z-index: 1031;
 }
 
-/* line 837, ../sass/_overrides.scss */
+/* line 839, ../sass/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration {
   padding-top: 103px !important;
 }
 
-/* line 840, ../sass/_overrides.scss */
+/* line 842, ../sass/_overrides.scss */
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open {
   padding-top: 143px !important;
 }
 
-/* line 843, ../sass/_overrides.scss */
+/* line 845, ../sass/_overrides.scss */
 body.navbar-tray-open.navbar-vertical.navbar-fixed {
   margin-left: 240px;
   margin-left: 24rem;
 }
 
-/* line 847, ../sass/_overrides.scss */
+/* line 849, ../sass/_overrides.scss */
 #navbar-administration.navbar-oriented .navbar-tray-vertical {
   width: 24rem;
 }
@@ -9810,21 +9812,21 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 /**
  * Icon styles.
  */
-/* line 855, ../sass/_overrides.scss */
+/* line 857, ../sass/_overrides.scss */
 a.icon-before .glyphicon {
   margin-right: .25em;
 }
-/* line 858, ../sass/_overrides.scss */
+/* line 860, ../sass/_overrides.scss */
 a.icon-after .glyphicon {
   margin-left: .25em;
 }
 
-/* line 864, ../sass/_overrides.scss */
+/* line 866, ../sass/_overrides.scss */
 .btn.icon-before .glyphicon {
   margin-left: -.25em;
   margin-right: .25em;
 }
-/* line 868, ../sass/_overrides.scss */
+/* line 870, ../sass/_overrides.scss */
 .btn.icon-after .glyphicon {
   margin-left: .25em;
   margin-right: -.25em;
