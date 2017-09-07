@@ -74,14 +74,43 @@ ul {
   padding-left: 16px;
 }
 
+/*
+* — Forms —
+*/
+
+.form-group {
+  margin: 15px 15px 15px 0;
+}
+
+.form-control {
+  width: auto;
+  margin-bottom: 1em;
+}
+
+.form-wrapper {
+  margin: 15px 0;
+  select {
+    clear: left;
+  }
+  select, input {
+    margin-right: 15px;
+  }
+  .btn.form-submit {
+    clear: left;
+    float: left;
+  }
+}
+
+
+
 .btn-success {
   background-color: $bntSuccessColor;
 }
 
+/* Drupal messages */
 .messages {
   margin: 1em 0;
 }
-
 
 /* The signin view. Logging into the chat. */
 
@@ -149,7 +178,11 @@ li.leaf {
       background-color: orange;
     }
   }
-  /* CHATTING - /OPEKA#ROOMS/<ROOM ID> */
+
+  /*
+  * === CHATTING - /OPEKA#ROOMS/<ROOM ID> ===
+  */
+
   /* The user info and admin sidebar */
   .app-view {
     margin-top: 15px;
