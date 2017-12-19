@@ -30,15 +30,13 @@ $messageHighlight: #ffffff;
 or as theme settings
 Hide page title on opeka pages
 Hide leave room button for counselors
-Hide the close chat button from the chat view
-Hide the writers message for anon users */
+Hide the close chat button from the chat view */
 .room-size-2 .chat-toggle,
 .groupchat .chat-toggle,
 .logged-in .leave-room-form,
 .page-admin-opeka .page-header,
 .page-opeka .page-header,
-.not-logged-in .online-status-view,
-.not-logged-in .writers-message {
+.not-logged-in .online-status-view {
   display: none;
 }
 
