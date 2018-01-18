@@ -10,8 +10,6 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
-/* Responsive media query breakpoints */
-/* Bootstrap overrides */
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -4574,32 +4572,32 @@ a.btn.disabled, fieldset[disabled] a.btn {
 /* line 75, ../bootstrap/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-success {
   color: #fff;
-  background-color: #27ae61;
-  border-color: #229955;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 /* line 11, ../bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success:focus, .btn-success.focus {
   color: #fff;
-  background-color: #1e844a;
-  border-color: #0b311b;
+  background-color: #449d44;
+  border-color: #255625;
 }
 /* line 17, ../bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success:hover {
   color: #fff;
-  background-color: #1e844a;
-  border-color: #17673a;
+  background-color: #449d44;
+  border-color: #398439;
 }
 /* line 22, ../bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
   color: #fff;
-  background-color: #1e844a;
-  border-color: #17673a;
+  background-color: #449d44;
+  border-color: #398439;
 }
 /* line 29, ../bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus, .open > .btn-success.dropdown-toggle:hover, .open > .btn-success.dropdown-toggle:focus, .open > .btn-success.dropdown-toggle.focus {
   color: #fff;
-  background-color: #17673a;
-  border-color: #0b311b;
+  background-color: #398439;
+  border-color: #255625;
 }
 /* line 37, ../bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success:active, .btn-success.active, .open > .btn-success.dropdown-toggle {
@@ -4607,12 +4605,12 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 /* line 45, ../bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus, fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success.focus {
-  background-color: #27ae61;
-  border-color: #229955;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
 /* line 53, ../bootstrap/assets/stylesheets/bootstrap/mixins/_buttons.scss */
 .btn-success .badge {
-  color: #27ae61;
+  color: #5cb85c;
   background-color: #fff;
 }
 
@@ -6499,11 +6497,11 @@ a.label:hover, a.label:focus {
 
 /* line 52, ../bootstrap/assets/stylesheets/bootstrap/_labels.scss */
 .label-success {
-  background-color: #27ae61;
+  background-color: #5cb85c;
 }
 /* line 7, ../bootstrap/assets/stylesheets/bootstrap/mixins/_labels.scss */
 .label-success[href]:hover, .label-success[href]:focus {
-  background-color: #1e844a;
+  background-color: #449d44;
 }
 
 /* line 56, ../bootstrap/assets/stylesheets/bootstrap/_labels.scss */
@@ -6836,7 +6834,7 @@ a.thumbnail.active {
 
 /* line 73, ../bootstrap/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress-bar-success {
-  background-color: #27ae61;
+  background-color: #5cb85c;
 }
 /* line 7, ../bootstrap/assets/stylesheets/bootstrap/mixins/_progress-bar.scss */
 .progress-striped .progress-bar-success {

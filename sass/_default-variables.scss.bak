@@ -1,0 +1,109 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+/* Responsive media query breakpoints */
+$small-width: 20em; //230px
+$small-smart-width: 23em; //360px
+$smart-width: 30em; //480px
+$tablet-width: 36.625em; //586px
+$tablet-height: 64em; // 1024px
+$desktop-width: 70em; // 1120px
+
+$onepx: 0.063em;
+
+@mixin small {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin small-smart {
+  @media (min-width: #{$small-smart-width}) {
+    @content;
+  }
+}
+
+@mixin smart {
+  @media (min-width: #{$smart-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (min-height: #{$tablet-height}) {
+    @content;
+  }
+}
+
+@mixin tablet-width {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+$gray-light2: #F8F8F8;
+$gray-darker: #222;
+$pairChatBodyBgColor: $gray-light2;
+$groupChatBodyBgColor: $gray-light2;
+$mainBgColor: $gray-light2;
+$btnBgColor: #34495e;
+$disabledBtnBgColor: #e7e7e7;
+$disabledBtnBorderColor: darken( $disabledBtnBgColor, 40% );
+$bntSuccessColor: #27ae61;
+$ccGreen: #25AD60;
+$ccGray: #333333;
+$wrapperBgColor: transparent;
+$borderColor: #cccccc;
+$contentBgColor: #ffffff;
+$borderRadius: 5px;
+$bgImage: url("images/repeat_main.png");
+$bgImagePair: url("images/bg_img_pair.png");
+$bgImageGroup: url("images/bg_img_group.png");
+// Room list colors
+$roomInfoColor: #ffffff;
+// Message callout colors
+$messageBgColor: whitesmoke;
+$messageCounselorBgColor: #f4faf4;
+$messageClientBgColor: #f5f9fc;
+// Message callout border left colors
+$messageBorderLeftColor: #cccccc;
+$messageCounselorBLColor: darken( $messageCounselorBgColor, 40% );
+$messageClientBLColor: darken( $messageClientBgColor, 40% );
+// Message callout meta data (time etc) color
+$messageMetaDataColor: #999999;
+$messageCounselorMDColor: #a3d7a3;
+$messageClientMDColor: #91bce0;
+$messageHighlight: #ffffff;
+
+/* Bootstrap overrides */
+$brand-success: $bntSuccessColor;
+
+$btn-success-color:              #fff;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             darken($btn-success-bg, 5%);
+
+$font-size-base: 14px;
+$font-size-small: 12px;
+
+//$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+//$brand-info:            #5bc0de !default;
+//$brand-warning:         #f0ad4e !default;
+//$brand-danger:          #d9534f !default;

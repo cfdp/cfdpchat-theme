@@ -1,5 +1,5 @@
-name = 'CuraChat theme #II'
-description = Uses the Bootstrap Framework Sass source files and must be compiled (not for beginners).
+name = 'CuraChat theme v2'
+description = Theme for the CuraChat project. Using Bootstrap v.3. Uses the Bootstrap Framework Sass source files and must be compiled (not for beginners).
 core = 7.x
 base theme = bootstrap
 
